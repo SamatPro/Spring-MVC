@@ -1,7 +1,7 @@
-package ru.kpfu.itis.reposirories.tours;
+package ru.kpfu.itis.repositories.tours;
 
 import ru.kpfu.itis.models.Tour;
-import ru.kpfu.itis.reposirories.CrudRepository;
+import ru.kpfu.itis.repositories.CrudRepository;
 
 public interface ToursRepository extends CrudRepository<Tour> {
 

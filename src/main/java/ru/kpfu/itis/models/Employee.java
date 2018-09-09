@@ -1,7 +1,14 @@
 package ru.kpfu.itis.models;
 
+import lombok.*;
+
 import java.util.Date;
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@Builder
+@ToString
 public class Employee {
     private Long id;
     private String lastName;

@@ -1,4 +1,4 @@
-package ru.kpfu.itis.reposirories;
+package ru.kpfu.itis.repositories;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ru.kpfu.itis.reposirories.clients;
+package ru.kpfu.itis.repositories.clients;
 
 import lombok.SneakyThrows;
 import ru.kpfu.itis.models.Client;

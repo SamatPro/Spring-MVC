@@ -1,8 +1,15 @@
 package ru.kpfu.itis.models;
 
+import lombok.*;
+
 import java.util.Date;
 import java.util.List;
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@Builder
+@ToString
 public class Tour {
     private Long id;
     private Date departureDate;

@@ -1,7 +1,7 @@
-package ru.kpfu.itis.reposirories.countries;
+package ru.kpfu.itis.repositories.countries;
 
 import ru.kpfu.itis.models.Country;
-import ru.kpfu.itis.reposirories.CrudRepository;
+import ru.kpfu.itis.repositories.CrudRepository;
 
 import java.util.List;
 

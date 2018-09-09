@@ -1,9 +1,9 @@
-package ru.kpfu.itis.reposirories.cities;
+package ru.kpfu.itis.repositories.cities;
 
 import ru.kpfu.itis.models.City;
 import ru.kpfu.itis.models.Sight;
 import ru.kpfu.itis.models.Transport;
-import ru.kpfu.itis.reposirories.CrudRepository;
+import ru.kpfu.itis.repositories.CrudRepository;
 
 import java.util.List;
 

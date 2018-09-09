@@ -1,7 +1,7 @@
-package ru.kpfu.itis.reposirories.clients;
+package ru.kpfu.itis.repositories.clients;
 
 import ru.kpfu.itis.models.Client;
-import ru.kpfu.itis.reposirories.CrudRepository;
+import ru.kpfu.itis.repositories.CrudRepository;
 
 import java.util.List;
 

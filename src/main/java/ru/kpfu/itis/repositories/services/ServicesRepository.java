@@ -1,7 +1,7 @@
-package ru.kpfu.itis.reposirories.services;
+package ru.kpfu.itis.repositories.services;
 
 import ru.kpfu.itis.models.Services;
-import ru.kpfu.itis.reposirories.CrudRepository;
+import ru.kpfu.itis.repositories.CrudRepository;
 
 public interface ServicesRepository extends CrudRepository<Services> {
 

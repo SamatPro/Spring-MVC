@@ -1,0 +1,6 @@
+# folder .idea
+.idea/
+# folder target
+target/
+#folder src
+scr/test

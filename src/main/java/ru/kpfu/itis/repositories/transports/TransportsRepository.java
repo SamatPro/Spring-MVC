@@ -1,7 +1,8 @@
-package ru.kpfu.itis.reposirories.transports;
+package ru.kpfu.itis.repositories.transports;
 
 import ru.kpfu.itis.models.Transport;
-import ru.kpfu.itis.reposirories.CrudRepository;
+import ru.kpfu.itis.repositories.CrudRepository;
 
 public interface TransportsRepository extends CrudRepository<Transport> {
+
 }

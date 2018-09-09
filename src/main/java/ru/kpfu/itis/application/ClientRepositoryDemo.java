@@ -1,8 +1,8 @@
 package ru.kpfu.itis.application;
 
 import lombok.SneakyThrows;
-import ru.kpfu.itis.reposirories.clients.ClientsRepository;
-import ru.kpfu.itis.reposirories.clients.ClientsRepositoryImpl;
+import ru.kpfu.itis.repositories.clients.ClientsRepository;
+import ru.kpfu.itis.repositories.clients.ClientsRepositoryImpl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
