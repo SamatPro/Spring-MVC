@@ -16,5 +16,4 @@ public class Order {
     private List<Tour> tours;
     private List<Employee> employees;
     private List<Client> clients;
-
 }

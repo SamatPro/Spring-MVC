@@ -10,4 +10,5 @@ import lombok.*;
 public class Transport {
     private Long id;
     private String name;
+
 }

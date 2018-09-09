@@ -19,6 +19,5 @@ public class Application {
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
-
     }
 }

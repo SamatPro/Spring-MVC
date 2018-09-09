@@ -11,4 +11,5 @@ public interface CitiesRepository extends CrudRepository<City> {
     List<City> findAllByCountry(String country);
     List<Transport> findCitiesByTransport(String transport);
     List<Sight> findCitiesSightsType(String type);
+
 }

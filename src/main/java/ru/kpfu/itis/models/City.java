@@ -13,5 +13,4 @@ public class City {
     private String name;
     private String country;
     private List<Sight> sights;
-
 }

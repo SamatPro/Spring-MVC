@@ -9,6 +9,5 @@ public class BuildDemo {
                         .lastName("Zaydullin")
                         .address("New Demkino")
                         .build();
-
     }
 }

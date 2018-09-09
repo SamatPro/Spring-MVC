@@ -26,6 +26,7 @@ public class Client {
                 ", address='" + address + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 "}";
+
     }
 }
 

@@ -9,4 +9,5 @@ public interface ClientsRepository extends CrudRepository<Client> {
     List<Client> findAllByFirstName(String firstName);
     List<Client> findAllByGender(String gender);
     List<Client> findAllByAge(Long age);
+
 }

@@ -13,4 +13,5 @@ public class Country {
     private Long id;
     private String name;
     private List<City> cities;
+
 }

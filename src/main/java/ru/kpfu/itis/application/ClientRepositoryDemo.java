@@ -25,5 +25,4 @@ public class ClientRepositoryDemo {
         System.out.println(clientsRepository.findAllByGender("m"));
         System.out.println(clientsRepository.findAllByFirstName("Emil"));
     }
-
 }

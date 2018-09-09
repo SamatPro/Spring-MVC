@@ -5,4 +5,5 @@ import ru.kpfu.itis.repositories.CrudRepository;
 
 public interface TransportsRepository extends CrudRepository<Transport> {
 
+
 }

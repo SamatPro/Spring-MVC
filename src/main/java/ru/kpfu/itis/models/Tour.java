@@ -17,5 +17,4 @@ public class Tour {
     private Integer peopleAmount;
     private List<Services> services;
     private List<Transport> transports;
-
 }

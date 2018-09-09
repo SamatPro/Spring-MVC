@@ -13,5 +13,4 @@ public class Sight {
     private String cityName;
     private String type;
     private Long establishment;
-
 }

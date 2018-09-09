@@ -20,5 +20,4 @@ public class Employee {
     private String position;
     private String address;
     private Long phoneNumber;
-
 }

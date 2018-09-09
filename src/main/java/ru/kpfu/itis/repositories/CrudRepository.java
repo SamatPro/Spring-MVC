@@ -8,4 +8,5 @@ public interface CrudRepository<T> {
     void delete(Long id);
 
     List<T> findAll();
+
 }

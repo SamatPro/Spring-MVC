@@ -34,7 +34,6 @@ public class ClientsRepositoryImpl implements ClientsRepository {
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
-
     }
 
     @Override
@@ -52,7 +51,6 @@ public class ClientsRepositoryImpl implements ClientsRepository {
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
-
     }
 
     @Override
