@@ -1,7 +1,6 @@
 package ru.kpfu.itis.application;
 
 import lombok.SneakyThrows;
-import ru.kpfu.itis.mappers.Client;
 import ru.kpfu.itis.reposirories.clients.ClientsRepository;
 import ru.kpfu.itis.reposirories.clients.ClientsRepositoryImpl;
 
@@ -19,9 +18,12 @@ public class ClientRepositoryDemo {
         Connection connection =
                 DriverManager.getConnection(URL, USERNAME, PASSWORD);
         ClientsRepository clientsRepository = new ClientsRepositoryImpl(connection);
-        Client client = clientsRepository.findOne(2L);
-        System.out.println(client);
-        System.out.println(clientsRepository.findAll());
+        //Client client = clientsRepository.findOne(2L);
+        //System.out.println(client);
+        //System.out.println(clientsRepository.findAll());
+        //Client client1 = clientsRepository.findAllByFirstName("Samat");
+        System.out.println(clientsRepository.findAllByGender("m"));
+        System.out.println(clientsRepository.findAllByFirstName("Emil"));
     }
 
 }

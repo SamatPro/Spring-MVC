@@ -1,9 +1,8 @@
 package ru.kpfu.itis.reposirories.clients;
 
 import lombok.SneakyThrows;
-import ru.kpfu.itis.mappers.Client;
-import ru.kpfu.itis.models.RowMapper;
-import ru.kpfu.itis.reposirories.clients.ClientsRepository;
+import ru.kpfu.itis.models.Client;
+import ru.kpfu.itis.mapper.RowMapper;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -22,6 +21,42 @@ public class ClientsRepositoryImpl implements ClientsRepository {
 
     @Override
     public List<Client> findAllByFirstName(String firstName) {
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet resultSet =
+                    statement.executeQuery("SELECT * FROM client_db WHERE gender = \'" + firstName +"\'");
+            List<Client> clients = new ArrayList<>();
+            while (resultSet.next()){
+                Client newClient = clientRowMapper.rowMap(resultSet);
+                clients.add(newClient);
+            }
+            return clients;
+        } catch (SQLException e) {
+            throw new IllegalStateException(e);
+        }
+
+    }
+
+    @Override
+    public List<Client> findAllByGender(String gender){
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet =
+                    statement.executeQuery("SELECT * FROM client_db WHERE gender = \'" + gender +"\'");
+            List<Client> clients = new ArrayList<>();
+            while (resultSet.next()){
+                Client newClient = clientRowMapper.rowMap(resultSet);
+                clients.add(newClient);
+            }
+            return clients;
+        } catch (SQLException e) {
+            throw new IllegalStateException(e);
+        }
+
+    }
+
+    @Override
+    public List<Client> findAllByAge(Long age) {
         return null;
     }
 
@@ -33,6 +68,7 @@ public class ClientsRepositoryImpl implements ClientsRepository {
                     .firstName(resultSet.getString("first_name"))
                     .lastName(resultSet.getString("last_name"))
                     .middleName(resultSet.getString("middle_name"))
+                    .gender(resultSet.getString("gender"))
                     .phoneNumber(resultSet.getLong("phone_number"))
                     .address(resultSet.getString("address"))
                     .id(resultSet.getLong("client_id"))

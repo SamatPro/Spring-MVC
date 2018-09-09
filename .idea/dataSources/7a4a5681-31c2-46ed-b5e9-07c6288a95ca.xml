@@ -24,8 +24,8 @@
     </schema>
     <schema id="8" parent="2" name="public">
       <ObjectId>16979</ObjectId>
-      <IntrospectionTimestamp>2018-09-09.14:06:07.205</IntrospectionTimestamp>
-      <IntrospectionStateNumber>822</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-09-09.17:48:18.649</IntrospectionTimestamp>
+      <IntrospectionStateNumber>836</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -41,45 +41,55 @@
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
-    <sequence id="11" parent="8" name="tour_db_tour_id_seq">
+    <sequence id="11" parent="8" name="sight_sight_id_seq">
+      <ObjectId>24630</ObjectId>
+      <StateNumber>833</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="8" name="tour_db_tour_id_seq">
       <ObjectId>17083</ObjectId>
       <StateNumber>804</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
-    <table id="12" parent="8" name="city">
+    <table id="13" parent="8" name="city">
       <ObjectId>24619</ObjectId>
-      <StateNumber>822</StateNumber>
+      <StateNumber>833</StateNumber>
     </table>
-    <table id="13" parent="8" name="client_db">
+    <table id="14" parent="8" name="client_db">
       <ObjectId>16980</ObjectId>
-      <StateNumber>810</StateNumber>
+      <StateNumber>836</StateNumber>
     </table>
-    <table id="14" parent="8" name="country">
+    <table id="15" parent="8" name="country">
       <ObjectId>17063</ObjectId>
       <StateNumber>822</StateNumber>
     </table>
-    <table id="15" parent="8" name="employee_db">
+    <table id="16" parent="8" name="employee_db">
       <ObjectId>16985</ObjectId>
-      <StateNumber>793</StateNumber>
+      <StateNumber>831</StateNumber>
     </table>
-    <table id="16" parent="8" name="order_db">
+    <table id="17" parent="8" name="order_db">
       <ObjectId>17018</ObjectId>
       <StateNumber>793</StateNumber>
     </table>
-    <table id="17" parent="8" name="service_db">
+    <table id="18" parent="8" name="service_db">
       <ObjectId>17073</ObjectId>
       <StateNumber>804</StateNumber>
     </table>
-    <table id="18" parent="8" name="tour_db">
+    <table id="19" parent="8" name="sight">
+      <ObjectId>24632</ObjectId>
+      <StateNumber>833</StateNumber>
+    </table>
+    <table id="20" parent="8" name="tour_db">
       <ObjectId>17085</ObjectId>
       <StateNumber>804</StateNumber>
     </table>
-    <table id="19" parent="8" name="transport">
+    <table id="21" parent="8" name="transport">
       <ObjectId>17053</ObjectId>
       <StateNumber>804</StateNumber>
     </table>
-    <column id="20" parent="12" name="id">
+    <column id="22" parent="13" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -87,28 +97,28 @@
       <SequenceName>city_id_seq</SequenceName>
       <DefaultExpression>nextval(&apos;city_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="21" parent="12" name="country_id">
+    <column id="23" parent="13" name="country_id">
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <StateNumber>822</StateNumber>
     </column>
-    <column id="22" parent="12" name="name">
+    <column id="24" parent="13" name="name">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>822</StateNumber>
     </column>
-    <index id="23" parent="12" name="city_pkey">
+    <index id="25" parent="13" name="city_pkey">
       <ObjectId>24623</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="24" parent="12" name="city_pkey">
+    <key id="26" parent="13" name="city_pkey">
       <ObjectId>24624</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>city_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="25" parent="12" name="city_country_id_fkey">
+    <foreign-key id="27" parent="13" name="city_country_id_fkey">
       <ObjectId>24625</ObjectId>
       <ColNames>country_id</ColNames>
       <RefTableId>17063</RefTableId>
@@ -117,128 +127,138 @@
       <RefKeyName>country_pkey</RefKeyName>
       <RefColNames>country_id</RefColNames>
     </foreign-key>
-    <column id="26" parent="13" name="client_id">
+    <column id="28" parent="14" name="client_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>787</StateNumber>
     </column>
-    <column id="27" parent="13" name="last_name">
+    <column id="29" parent="14" name="last_name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>787</StateNumber>
     </column>
-    <column id="28" parent="13" name="first_name">
+    <column id="30" parent="14" name="first_name">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>787</StateNumber>
     </column>
-    <column id="29" parent="13" name="middle_name">
+    <column id="31" parent="14" name="middle_name">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>787</StateNumber>
     </column>
-    <column id="30" parent="13" name="address">
+    <column id="32" parent="14" name="address">
       <Position>5</Position>
       <DataType>varchar(120)|0</DataType>
       <StateNumber>787</StateNumber>
     </column>
-    <column id="31" parent="13" name="phone_number">
+    <column id="33" parent="14" name="phone_number">
       <Position>6</Position>
       <DataType>bigint|0</DataType>
       <StateNumber>810</StateNumber>
     </column>
-    <index id="32" parent="13" name="client_db_pkey">
+    <column id="34" parent="14" name="gender">
+      <Position>7</Position>
+      <DataType>varchar(1)|0</DataType>
+      <StateNumber>836</StateNumber>
+    </column>
+    <index id="35" parent="14" name="client_db_pkey">
       <ObjectId>16983</ObjectId>
       <ColNames>client_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="33" parent="13" name="client_db_pkey">
+    <key id="36" parent="14" name="client_db_pkey">
       <ObjectId>16984</ObjectId>
       <ColNames>client_id</ColNames>
       <UnderlyingIndexName>client_db_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="34" parent="14" name="country_id">
+    <column id="37" parent="15" name="country_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>802</StateNumber>
     </column>
-    <column id="35" parent="14" name="name">
+    <column id="38" parent="15" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>802</StateNumber>
     </column>
-    <index id="36" parent="14" name="country_pkey">
+    <index id="39" parent="15" name="country_pkey">
       <ObjectId>17066</ObjectId>
       <ColNames>country_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="14" name="country_pkey">
+    <key id="40" parent="15" name="country_pkey">
       <ObjectId>17067</ObjectId>
       <ColNames>country_id</ColNames>
       <UnderlyingIndexName>country_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="38" parent="15" name="employee_id">
+    <column id="41" parent="16" name="employee_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="39" parent="15" name="last_name">
+    <column id="42" parent="16" name="last_name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="40" parent="15" name="first_name">
+    <column id="43" parent="16" name="first_name">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="41" parent="15" name="middle_name">
+    <column id="44" parent="16" name="middle_name">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="42" parent="15" name="birth_date">
+    <column id="45" parent="16" name="birth_date">
       <Position>5</Position>
       <DataType>date|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="43" parent="15" name="salary">
+    <column id="46" parent="16" name="salary">
       <Position>6</Position>
       <DataType>integer|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="44" parent="15" name="position">
+    <column id="47" parent="16" name="position">
       <Position>7</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="45" parent="15" name="address">
+    <column id="48" parent="16" name="address">
       <Position>8</Position>
       <DataType>varchar(120)|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <column id="46" parent="15" name="phone_num">
+    <column id="49" parent="16" name="phone_num">
       <Position>9</Position>
       <DataType>integer|0</DataType>
       <StateNumber>788</StateNumber>
     </column>
-    <index id="47" parent="15" name="employee_db_pkey">
+    <column id="50" parent="16" name="gender">
+      <Position>10</Position>
+      <DataType>char|0</DataType>
+      <StateNumber>831</StateNumber>
+    </column>
+    <index id="51" parent="16" name="employee_db_pkey">
       <ObjectId>16988</ObjectId>
       <ColNames>employee_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="48" parent="15" name="employee_db_pkey">
+    <key id="52" parent="16" name="employee_db_pkey">
       <ObjectId>16989</ObjectId>
       <ColNames>employee_id</ColNames>
       <UnderlyingIndexName>employee_db_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="49" parent="16" name="order_id">
+    <column id="53" parent="17" name="order_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -246,33 +266,33 @@
       <SequenceName>order_db_order_id_seq</SequenceName>
       <DefaultExpression>nextval(&apos;order_db_order_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="50" parent="16" name="issue_date">
+    <column id="54" parent="17" name="issue_date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <StateNumber>793</StateNumber>
     </column>
-    <column id="51" parent="16" name="employee_fk">
+    <column id="55" parent="17" name="employee_fk">
       <Position>3</Position>
       <DataType>integer|0</DataType>
       <StateNumber>793</StateNumber>
     </column>
-    <column id="52" parent="16" name="client_fk">
+    <column id="56" parent="17" name="client_fk">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <StateNumber>793</StateNumber>
     </column>
-    <index id="53" parent="16" name="order_db_pkey">
+    <index id="57" parent="17" name="order_db_pkey">
       <ObjectId>17022</ObjectId>
       <ColNames>order_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="54" parent="16" name="order_db_pkey">
+    <key id="58" parent="17" name="order_db_pkey">
       <ObjectId>17023</ObjectId>
       <ColNames>order_id</ColNames>
       <UnderlyingIndexName>order_db_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="55" parent="16" name="order_db_employee_fk_fkey">
+    <foreign-key id="59" parent="17" name="order_db_employee_fk_fkey">
       <ObjectId>17024</ObjectId>
       <ColNames>employee_fk</ColNames>
       <RefTableId>16985</RefTableId>
@@ -281,7 +301,7 @@
       <RefKeyName>employee_db_pkey</RefKeyName>
       <RefColNames>employee_id</RefColNames>
     </foreign-key>
-    <foreign-key id="56" parent="16" name="order_db_client_fk_fkey">
+    <foreign-key id="60" parent="17" name="order_db_client_fk_fkey">
       <ObjectId>17029</ObjectId>
       <ColNames>client_fk</ColNames>
       <RefTableId>16980</RefTableId>
@@ -290,44 +310,44 @@
       <RefKeyName>client_db_pkey</RefKeyName>
       <RefColNames>client_id</RefColNames>
     </foreign-key>
-    <column id="57" parent="17" name="service_id">
+    <column id="61" parent="18" name="service_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>803</StateNumber>
     </column>
-    <column id="58" parent="17" name="country_fk">
+    <column id="62" parent="18" name="country_fk">
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <StateNumber>803</StateNumber>
     </column>
-    <column id="59" parent="17" name="accomodation">
+    <column id="63" parent="18" name="accomodation">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>803</StateNumber>
     </column>
-    <column id="60" parent="17" name="food">
+    <column id="64" parent="18" name="food">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>803</StateNumber>
     </column>
-    <column id="61" parent="17" name="excurtion">
+    <column id="65" parent="18" name="excurtion">
       <Position>5</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>803</StateNumber>
     </column>
-    <index id="62" parent="17" name="service_db_pkey">
+    <index id="66" parent="18" name="service_db_pkey">
       <ObjectId>17076</ObjectId>
       <ColNames>service_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="63" parent="17" name="service_db_pkey">
+    <key id="67" parent="18" name="service_db_pkey">
       <ObjectId>17077</ObjectId>
       <ColNames>service_id</ColNames>
       <UnderlyingIndexName>service_db_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="64" parent="17" name="service_db_country_fk_fkey">
+    <foreign-key id="68" parent="18" name="service_db_country_fk_fkey">
       <ObjectId>17078</ObjectId>
       <ColNames>country_fk</ColNames>
       <RefTableId>17063</RefTableId>
@@ -336,7 +356,55 @@
       <RefKeyName>country_pkey</RefKeyName>
       <RefColNames>country_id</RefColNames>
     </foreign-key>
-    <column id="65" parent="18" name="tour_id">
+    <column id="69" parent="19" name="sight_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>833</StateNumber>
+      <SequenceName>sight_sight_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;sight_sight_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="70" parent="19" name="city">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>833</StateNumber>
+    </column>
+    <column id="71" parent="19" name="name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>833</StateNumber>
+    </column>
+    <column id="72" parent="19" name="type">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>833</StateNumber>
+    </column>
+    <column id="73" parent="19" name="establishment">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>833</StateNumber>
+    </column>
+    <index id="74" parent="19" name="sight_pkey">
+      <ObjectId>24636</ObjectId>
+      <ColNames>sight_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="19" name="sight_pkey">
+      <ObjectId>24637</ObjectId>
+      <ColNames>sight_id</ColNames>
+      <UnderlyingIndexName>sight_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="76" parent="19" name="sight_city_fkey">
+      <ObjectId>24638</ObjectId>
+      <ColNames>city</ColNames>
+      <RefTableId>24619</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>city</RefTableName>
+      <RefKeyName>city_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="77" parent="20" name="tour_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -344,43 +412,43 @@
       <SequenceName>tour_db_tour_id_seq</SequenceName>
       <DefaultExpression>nextval(&apos;tour_db_tour_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="66" parent="18" name="departure_date">
+    <column id="78" parent="20" name="departure_date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <StateNumber>804</StateNumber>
     </column>
-    <column id="67" parent="18" name="arrival_date">
+    <column id="79" parent="20" name="arrival_date">
       <Position>3</Position>
       <DataType>date|0</DataType>
       <StateNumber>804</StateNumber>
     </column>
-    <column id="68" parent="18" name="people_amount">
+    <column id="80" parent="20" name="people_amount">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <StateNumber>804</StateNumber>
     </column>
-    <column id="69" parent="18" name="service_fk">
+    <column id="81" parent="20" name="service_fk">
       <Position>5</Position>
       <DataType>integer|0</DataType>
       <StateNumber>804</StateNumber>
     </column>
-    <column id="70" parent="18" name="transport_fk">
+    <column id="82" parent="20" name="transport_fk">
       <Position>6</Position>
       <DataType>integer|0</DataType>
       <StateNumber>804</StateNumber>
     </column>
-    <index id="71" parent="18" name="tour_db_pkey">
+    <index id="83" parent="20" name="tour_db_pkey">
       <ObjectId>17089</ObjectId>
       <ColNames>tour_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="72" parent="18" name="tour_db_pkey">
+    <key id="84" parent="20" name="tour_db_pkey">
       <ObjectId>17090</ObjectId>
       <ColNames>tour_id</ColNames>
       <UnderlyingIndexName>tour_db_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="73" parent="18" name="tour_db_service_fk_fkey">
+    <foreign-key id="85" parent="20" name="tour_db_service_fk_fkey">
       <ObjectId>17091</ObjectId>
       <ColNames>service_fk</ColNames>
       <RefTableId>17073</RefTableId>
@@ -389,7 +457,7 @@
       <RefKeyName>service_db_pkey</RefKeyName>
       <RefColNames>service_id</RefColNames>
     </foreign-key>
-    <foreign-key id="74" parent="18" name="tour_db_transport_fk_fkey">
+    <foreign-key id="86" parent="20" name="tour_db_transport_fk_fkey">
       <ObjectId>17096</ObjectId>
       <ColNames>transport_fk</ColNames>
       <RefTableId>17053</RefTableId>
@@ -398,23 +466,23 @@
       <RefKeyName>transport_pkey</RefKeyName>
       <RefColNames>transport_id</RefColNames>
     </foreign-key>
-    <column id="75" parent="19" name="transport_id">
+    <column id="87" parent="21" name="transport_id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>799</StateNumber>
     </column>
-    <column id="76" parent="19" name="name">
+    <column id="88" parent="21" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <StateNumber>799</StateNumber>
     </column>
-    <index id="77" parent="19" name="transport_pkey">
+    <index id="89" parent="21" name="transport_pkey">
       <ObjectId>17056</ObjectId>
       <ColNames>transport_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="78" parent="19" name="transport_pkey">
+    <key id="90" parent="21" name="transport_pkey">
       <ObjectId>17057</ObjectId>
       <ColNames>transport_id</ColNames>
       <UnderlyingIndexName>transport_pkey</UnderlyingIndexName>
