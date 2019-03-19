@@ -1,91 +1,92 @@
 package ru.kpfu.itis.repositories.employees;
 
 import lombok.SneakyThrows;
-import org.postgresql.util.PSQLException;
-import ru.kpfu.itis.mapper.RowMapper;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Component;
 import ru.kpfu.itis.models.Employee;
+import ru.kpfu.itis.models.Order;
 
-import java.sql.Connection;
+import javax.sql.DataSource;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
-
+@Component("employeesRepositoryJdbcTemplateImpl")
 public class EmployeesRepositoryImpl implements EmployeesRepository{
 
-    private Connection connection;
+    private JdbcTemplate jdbcTemplate;
 
-//    private static final String SQL_FIND_ONE_BY_ID_QUERY = "SELECT name FROM city WHERE id = ?";
-    private static final String SQL_INSERT_QUERY = "INSERT INTO employee_db(id, login, hash_password, last_name, first_name, middle_name, position) VALUES (?, ?, ?, ?, ?, ?, ?);";
+    private static final String SQL_SELECT_EMPLOYEE_BY_COOKIE =
+            "SELECT * FROM employee_db LEFT JOIN auth ON employee_db.id=auth.employee_id WHERE auth.cookie_value=?;";
+
+    private static final String SQL_INSERT_QUERY = "INSERT INTO employee_db(login, hash_password, last_name, first_name, middle_name, position) VALUES (?, ?, ?, ?, ?, ?);";
     private static final String DELETE_BY_ID = "DELETE FROM ONLY employee_db WHERE id=?;";
     private static final String SELECT_EMPLOYEE_BY_LOGIN = "SELECT * FROM employee_db WHERE login = ?;";
+    private static final String SELECT_EMPLOYEE_BY_ID = "SELECT * FROM employee_db WHERE id = ?;";
 
 
-    public EmployeesRepositoryImpl(Connection connection) {
-        this.connection = connection;
+    @Autowired
+    public EmployeesRepositoryImpl(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     @Override
-    public String findAllByPosition(String position) {
-        return null;
-    }
-
-    @Override
-    @SneakyThrows
     public Optional<Employee> findOneByLogin(String login) {
-        PreparedStatement statement = connection.prepareStatement(SELECT_EMPLOYEE_BY_LOGIN);
-        statement.setString(1, login);
-        ResultSet resultSet = statement.executeQuery();
-        if(resultSet.next()){
+        try{
+            return Optional.of(jdbcTemplate.queryForObject(SELECT_EMPLOYEE_BY_LOGIN, employeeRowMapper, login));
+        }catch (EmptyResultDataAccessException e){
             return Optional.empty();
         }
-        return Optional.of(employeeWithoutOrdersRowMapper.rowMap(resultSet));
     }
 
     @Override
-    @SneakyThrows
-    public Optional<Employee> findOne(Long id) {
+    public Optional<Employee> findEmployeeByCookie(String cookieValue) {
+        try{
+            return Optional.of(jdbcTemplate.queryForObject(SQL_SELECT_EMPLOYEE_BY_COOKIE, employeeRowMapper, cookieValue));
+        }catch (EmptyResultDataAccessException e){
+            return Optional.empty();
+        }
+    }
 
-        Statement statement = connection.createStatement();
-        ResultSet resultSet =
-                statement.executeQuery("SELECT name FROM employee_db WHERE id = " + id);
-        resultSet.next();
-        return Optional.of(employeeRowMapper.rowMap(resultSet));
+
+    @Override
+    public Optional<Employee> findOne(Long id) {
+        try {
+            return Optional.of(jdbcTemplate.queryForObject(SELECT_EMPLOYEE_BY_ID, employeeRowMapper, id));
+        }catch (EmptyResultDataAccessException e){
+            return Optional.empty();
+        }
     }
 
     @Override
     @SneakyThrows
     public void save(Employee model) {
-        PreparedStatement statement = connection.prepareStatement(SQL_INSERT_QUERY, PreparedStatement.RETURN_GENERATED_KEYS);
-        statement.setLong(1, model.getId());
-        statement.setString(2, model.getLogin());
-        statement.setString(3, model.getHashPassword());
-        statement.setString(4, model.getLastName());
-        statement.setString(5, model.getFirstName());
-        statement.setString(6, model.getMiddleName());
-        statement.setString(7,model.getPosition());
-//        statement.setLong(1, model.getId());
-//        statement.setString(2, model.getName());
-        //Можем создать в отдельном классе метод заменитель, куда будем передавать statement, по паттерну легковес
-
-        try{
-            statement.executeUpdate();
-        }catch (PSQLException e){
-//            PreparedStatement statement2 = connection.prepareStatement(DELETE_BY_ID);
-//            statement2.setLong(1, model.getId());
-//            statement2.executeUpdate();
-            delete(model.getId());
-            statement.executeUpdate();
-        }
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        jdbcTemplate.update(
+                connection -> {
+                    PreparedStatement ps =
+                            connection.prepareStatement(SQL_INSERT_QUERY, new String[]{"id"});
+                    ps.setString(1, model.getLogin());
+                    ps.setString(2, model.getHashPassword());
+                    ps.setString(3, model.getLastName());
+                    ps.setString(4, model.getFirstName());
+                    ps.setString(5, model.getMiddleName());
+                    ps.setString(6, model.getPosition());
+                    return ps;
+                }, keyHolder
+        );
+        model.setId(keyHolder.getKey().longValue());
     }
 
     @Override
-    @SneakyThrows
     public void delete(Long id) {
-        PreparedStatement statement = connection.prepareStatement(DELETE_BY_ID);
-        statement.setLong(1, id);
-        statement.executeUpdate();
+
     }
 
     @Override
@@ -93,33 +94,16 @@ public class EmployeesRepositoryImpl implements EmployeesRepository{
         return null;
     }
 
-    private RowMapper<Employee> employeeRowMapper = new RowMapper<Employee>() {
-        @Override
-        @SneakyThrows
-        public Employee rowMap(ResultSet resultSet){
-            return Employee.builder()
-                    .id(resultSet.getLong("id"))
-                    .login(resultSet.getString("login"))
-                    .hashPassword(resultSet.getString("hash_password"))
-                    .firstName(resultSet.getString("first_name"))
-                    .lastName(resultSet.getString("last_name"))
-                    .middleName(resultSet.getString("middle_name"))
-                    .position(resultSet.getString("position"))
-                    .build();
-        }
-    };
-
-    private RowMapper<Employee> employeeWithoutOrdersRowMapper = new RowMapper<Employee>() {
-        @Override
-        @SneakyThrows
-        public Employee rowMap(ResultSet resultSet) {
-            return Employee.builder()
-                    .login(resultSet.getString("login"))
-                    .hashPassword(resultSet.getString("hash_password"))
-                    .firstName(resultSet.getString("first_name"))
-                    .lastName(resultSet.getString("last_name"))
-                    .id(resultSet.getLong("id"))
-                    .build();
-        }
-    };
+    @Override
+    public void update(Employee model) {
+    }
+    private RowMapper<Employee> employeeRowMapper = (resultSet, i) -> Employee.builder()
+            .id(resultSet.getLong("id"))
+            .lastName(resultSet.getString("last_name"))
+            .firstName(resultSet.getString("first_name"))
+            .middleName(resultSet.getString("middle_name"))
+            .login(resultSet.getString("login"))
+            .hashPassword(resultSet.getString("hash_password"))
+            .position(resultSet.getString("position"))
+            .build();
 }

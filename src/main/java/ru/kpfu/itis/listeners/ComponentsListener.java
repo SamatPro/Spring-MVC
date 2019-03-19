@@ -1,34 +1,51 @@
-package ru.kpfu.itis.context;
+package ru.kpfu.itis.listeners;
 
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import ru.kpfu.itis.repositories.AuthRepository;
-import ru.kpfu.itis.repositories.AuthRepositoryImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.kpfu.itis.repositories.auths.AuthRepository;
+import ru.kpfu.itis.repositories.cities.CitiesRepository;
 import ru.kpfu.itis.repositories.clients.ClientsRepository;
-import ru.kpfu.itis.repositories.clients.ClientsRepositoryImpl;
+import ru.kpfu.itis.repositories.cooperativeTours.CooperativeToursRepository;
+import ru.kpfu.itis.repositories.countries.CountriesRepository;
+import ru.kpfu.itis.repositories.employees.EmployeesRepository;
+import ru.kpfu.itis.repositories.orders.OrdersRepository;
+import ru.kpfu.itis.repositories.pictures.PicturesRepository;
 import ru.kpfu.itis.services.client.ClientService;
-import ru.kpfu.itis.services.client.ClientServiceImpl;
+import ru.kpfu.itis.services.employee.EmployeeService;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 public class ComponentsListener implements ServletContextListener {
 
-    private static final String USERNAME = "postgres";
-    private static final String PASSWORD = "postgres";
-    private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String DRIVER = "org.postgresql.Driver";
-
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(DRIVER);
-        dataSource.setUsername(USERNAME);
-        dataSource.setPassword(PASSWORD);
-        dataSource.setUrl(URL);
-        ClientsRepository clientsRepository = new ClientsRepositoryImpl(dataSource);
-        AuthRepository authRepository = new AuthRepositoryImpl(dataSource);
-        ClientService clientService = new ClientServiceImpl(clientsRepository, authRepository);
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("ru.kpfu.itis/context.xml");
+        ClientService clientService = context.getBean(ClientService.class);
+        ClientsRepository clientsRepository = context.getBean(ClientsRepository.class);
+        EmployeeService employeeService = context.getBean(EmployeeService.class);
+        EmployeesRepository employeesRepository = context.getBean(EmployeesRepository.class);
+        AuthRepository authRepository = context.getBean(AuthRepository.class);
+        OrdersRepository ordersRepository = context.getBean(OrdersRepository.class);
+        CitiesRepository citiesRepository = context.getBean(CitiesRepository.class);
+        CountriesRepository countriesRepository = context.getBean(CountriesRepository.class);
+        CooperativeToursRepository cooperativeToursRepository = context.getBean(CooperativeToursRepository.class);
+        PicturesRepository picturesRepository = context.getBean(PicturesRepository.class);
+
+        sce.getServletContext().setAttribute("clientRepository", clientsRepository);
         sce.getServletContext().setAttribute("clientService", clientService);
+        sce.getServletContext().setAttribute("authRepository", authRepository);
+        sce.getServletContext().setAttribute("employeeService", employeeService);
+        sce.getServletContext().setAttribute("employeeRepository", employeesRepository);
+        sce.getServletContext().setAttribute("orderRepository", ordersRepository);
+        sce.getServletContext().setAttribute("cityRepository", citiesRepository);
+        sce.getServletContext().setAttribute("cooperativeTours", cooperativeToursRepository);
+        sce.getServletContext().setAttribute("picturesRepository", picturesRepository);
+        sce.getServletContext().setAttribute("countriesRepository", countriesRepository);
+
+
+
     }
 
     @Override

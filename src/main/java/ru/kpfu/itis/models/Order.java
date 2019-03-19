@@ -5,15 +5,17 @@ import lombok.*;
 import java.util.Date;
 import java.util.List;
 
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@ToString
 public class Order {
     private Long id;
     private Date issueDate;
+    private Long price;
     private List<Tour> tours;
-    private List<Employee> employees;
-    private List<Client> clients;
+    private Employee employee;
+    private Client client;
+    private Boolean isAccepted;
+    private City city;
 }

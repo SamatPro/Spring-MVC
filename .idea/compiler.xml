@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JAVA_EE" />
+        <module name="Java_Spring" />
+        <module name="SpringProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JAVA_EE" target="1.8" />
+      <module name="Java_Spring" target="8" />
+      <module name="SpringProject" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

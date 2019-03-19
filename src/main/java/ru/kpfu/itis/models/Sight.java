@@ -2,15 +2,17 @@ package ru.kpfu.itis.models;
 
 import lombok.*;
 
-@Getter
-@Setter
-@EqualsAndHashCode
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@ToString
 public class Sight {
     private Long id;
     private String name;
     private String cityName;
-    private String type;
+    private List<SightTypes> types;
     private Long establishment;
+
 }

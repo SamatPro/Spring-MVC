@@ -2,22 +2,21 @@ package ru.kpfu.itis.models;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@ToString
 public class Employee {
     private Long id;
     private String lastName;
     private String firstName;
     private String middleName;
-    private String gender;
-    private Date birthDate;
-    private Integer salary;
+    private String login;
+    private String hashPassword;
     private String position;
-    private String address;
-    private Long phoneNumber;
+
 }

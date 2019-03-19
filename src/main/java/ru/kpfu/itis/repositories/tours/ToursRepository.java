@@ -5,5 +5,4 @@ import ru.kpfu.itis.repositories.CrudRepository;
 
 public interface ToursRepository extends CrudRepository<Tour> {
 
-
 }

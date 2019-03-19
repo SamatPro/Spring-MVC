@@ -4,11 +4,10 @@ import lombok.*;
 
 import java.util.List;
 
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@ToString
 public class Services {
     private Long id;
     private String accomodations;

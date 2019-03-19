@@ -1,4 +1,7 @@
 package ru.kpfu.itis.mapper;
 
-public class RowMapper {
+import java.sql.ResultSet;
+
+public interface RowMapper<T> {
+    T rowMap(ResultSet resultSet);
 }

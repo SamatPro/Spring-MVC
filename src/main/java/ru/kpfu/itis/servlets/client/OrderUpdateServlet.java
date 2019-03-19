@@ -1,4 +1,4 @@
-package ru.kpfu.itis.servlets;
+package ru.kpfu.itis.servlets.client;
 
 import ru.kpfu.itis.models.Client;
 import ru.kpfu.itis.repositories.clients.ClientsRepository;
@@ -9,45 +9,25 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.Optional;
 
-@WebServlet("/order/update")
+//@WebServlet("/order/update")
 public class OrderUpdateServlet extends HttpServlet {
-    OrdersRepository ordersRepository;
-    ClientService clientService;
-    ClientsRepository clientsRepository;
+
+    private ClientService clientService;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         ServletContext context = config.getServletContext();
-        ordersRepository = (OrdersRepository) context.getAttribute("orderRepository");
-        clientService = (ClientService) context.getAttribute("clientService");
-        clientsRepository = (ClientsRepository) context.getAttribute("clientRepository");
+        this.clientService = (ClientService) context.getAttribute("clientService");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long client_id = null; /*= Long.parseLong(req.getParameter("client_id"));*/
-        Cookie cookies[] = request.getCookies();
-
-        if(cookies != null){
-            for (Cookie cookie : cookies){
-                if(cookie.getName().equals("auth")){
-                    if (clientService.isExistByCookie(cookie.getValue())){
-                        Optional<Client> clientOptional = clientsRepository.findClientByCookie(cookie.getValue());
-                        Client client = clientOptional.get();
-                        client_id = client.getId();
-                    }
-                }
-            }
-        }
+        Client client = clientService.getClient(request);
         Long city_id = Long.parseLong(request.getParameter("city_id"));
-        ordersRepository.addOrder(client_id, city_id);
-
+        clientService.addOrder(client.getId(), city_id);
     }
 }

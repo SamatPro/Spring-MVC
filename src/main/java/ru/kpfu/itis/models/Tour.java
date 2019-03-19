@@ -2,19 +2,16 @@ package ru.kpfu.itis.models;
 
 import lombok.*;
 
-import java.util.Date;
-import java.util.List;
+import java.sql.Date;
+import java.time.LocalDate;
 
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@ToString
 public class Tour {
     private Long id;
-    private Date departureDate;
-    private Date arrivalDate;
-    private Integer peopleAmount;
-    private List<Services> services;
-    private List<Transport> transports;
+    private LocalDate departureDate;
+    private LocalDate arrivalDate;
+
 }

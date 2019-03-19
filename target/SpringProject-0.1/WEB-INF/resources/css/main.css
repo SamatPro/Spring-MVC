@@ -1,0 +1,159 @@
+body{
+    font-family: 'URW Chancery L', cursive;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: #000
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h2 {
+    text-align: center;
+}
+
+header{
+    background-color: lightgrey;
+    color: #010101;
+    padding-top:15px;
+    padding-bottom: 105px;
+}
+.newheader{
+    background-color: lightgrey;
+    color: #010101;
+    padding-top:15px;
+    padding-bottom: 10px;
+}
+
+.logo{
+    width: 180px;
+    height: 115px;
+}
+
+.menu {
+    margin-top:45px;
+}
+
+.menu__item {
+    margin: 0 50px;
+}
+
+.menu__item a {
+    font-size:22px;
+    font-weight:700;
+    color: red;
+}
+
+.shuttle{
+    display: block;
+    margin: 10px auto 0;
+}
+
+.offer{
+    margin-top:55px;
+}
+
+.offer__title {
+    font-size:32px;
+    margin-bottom: 15px;
+}
+
+.offer__intro {
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+.offer__text {
+    font-size: 16px;
+    margin-top:15px;
+    color: #555555;
+    width: 400px;
+}
+
+.features{
+    background-color: white;
+    padding-top:30px;
+    padding-bottom: 105px;
+}
+
+.feature__text{
+    font-size: 18px;
+    margin-top:15px;
+    color: #555555;
+}
+
+.price{
+    background-color: #e7e5e6;
+    padding-top: 40px;
+    padding-bottom: 45px;
+}
+
+.priceTitle{
+    margin: 10px auto;
+}
+
+.contact{
+    padding:50px 0 40px;
+}
+
+.footer {
+    background: #000;
+    padding:50px 0 40px;
+    position: absolute;
+    width: 100%;
+}
+
+.credits {
+    color: #fff;
+    font-size: 18px;
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quest{
+    margin: 35px auto 15px;
+}
+
+.login{
+    margin: 20px auto 20px;
+}
+
+.registerform{
+    background: #fff;
+    padding-top: 25px;
+    padding-bottom: 55px;
+}
+
+.carousel {
+    margin-bottom: 4rem;
+}
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 32rem;
+    background-color: #777;
+}
+
+.about{
+    padding-bottom: 50px;
+    padding-top: 45px;
+    margin: 35px;
+}
+
+.reviews{
+    background-color: silver;
+    padding: 45px;
+}

@@ -3,8 +3,10 @@ package ru.kpfu.itis.servlets.client;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ru.kpfu.itis.models.Client;
 import ru.kpfu.itis.models.CooperativeTours;
+import ru.kpfu.itis.models.Country;
 import ru.kpfu.itis.repositories.clients.ClientsRepository;
 import ru.kpfu.itis.repositories.cooperativeTours.CooperativeToursRepository;
+import ru.kpfu.itis.repositories.countries.CountriesRepository;
 import ru.kpfu.itis.repositories.orders.OrdersRepository;
 import ru.kpfu.itis.services.client.ClientService;
 
@@ -21,67 +23,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@WebServlet("/myInvitations")
+//@WebServlet("/myInvitations")
 public class InvitationsPageServlet extends HttpServlet{
-    private OrdersRepository ordersRepository;
+
     private ClientService clientService;
-    private ClientsRepository clientsRepository;
-    private CooperativeToursRepository cooperativeToursRepository;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         ServletContext context = config.getServletContext();
-        this.ordersRepository = (OrdersRepository) context.getAttribute("orderRepository");
         this.clientService = (ClientService) context.getAttribute("clientService");
-        this.clientsRepository = (ClientsRepository) context.getAttribute("clientRepository");
-        this.cooperativeToursRepository = (CooperativeToursRepository) context.getAttribute("cooperativeTours");
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Optional<Client> clientOptional;
-        Client client = null;
-        Long clientId = null;
+        Client client = clientService.getClient(request);
 
-        Cookie cookies[] = request.getCookies();
-        if(cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("auth")) {
-                    if (clientService.isExistByCookie(cookie.getValue())) {
-                        clientOptional = clientsRepository.findClientByCookie(cookie.getValue());
-                        client = clientOptional.get();
-                        clientId = client.getId();
-                    }
-                    else {
-                        if (request.getSession().getAttribute("client")!=null) {
-                            clientId = (Long) request.getSession().getAttribute("client");
-                            clientOptional = clientsRepository.findOne(clientId);
-                            client = clientOptional.get();
-                        }
-                    }
-                }else {
-                    if (request.getSession().getAttribute("client")!=null) {
-                        clientId = (Long) request.getSession().getAttribute("client");
-                        clientOptional = clientsRepository.findOne(clientId);
-                        client = clientOptional.get();
-                    }
-                }
-            }
-        }
-
-        else {
-            if (request.getSession().getAttribute("client")!=null) {
-                clientId = (Long) request.getSession().getAttribute("client");
-                clientOptional = clientsRepository.findOne(clientId);
-                client = clientOptional.get();
-            }
-        }
-        List<CooperativeTours> list = cooperativeToursRepository.showUnConsentedTours(clientId);
+        List<CooperativeTours> list = clientService.showUnConsentedTours(client.getId());
         request.setAttribute("coop", list);
         request.setAttribute("clientFirstName", client.getFirstName());
         request.setAttribute("clientLastName", client.getLastName());
+        List<Country> countries = clientService.getCountries();
+        request.setAttribute("countries", countries);
 
-        request.getRequestDispatcher("WEB-INF/jsp/client/invitationsPage.jsp").forward(request, response);
+//        request.getRequestDispatcher("WEB-INF/jsp/client/invitationsPage.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/templates/client/invitationsPage.ftl").forward(request, response);
 
     }
 }

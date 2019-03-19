@@ -2,6 +2,7 @@ package ru.kpfu.itis.repositories.services;
 
 import lombok.SneakyThrows;
 import org.postgresql.util.PSQLException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class ServicesRepositoryImpl implements ServicesRepository{
+public class ServicesRepositoryJdbcTemplateImpl implements ServicesRepository{
 
     private static final String SQL_FIND_ONE_BY_ID_QUERY = "SELECT * FROM service_db WHERE id = ?";
 
@@ -26,12 +27,12 @@ public class ServicesRepositoryImpl implements ServicesRepository{
 
     private JdbcTemplate jdbcTemplate;
 
-    public ServicesRepositoryImpl(DataSource dataSource) {
+    @Autowired
+    public ServicesRepositoryJdbcTemplateImpl(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     @Override
-    @SneakyThrows
     public Optional<Services> findOne(Long id) {
         try {
             return Optional.of(jdbcTemplate.queryForObject(SQL_FIND_ONE_BY_ID_QUERY, servicesRowMapper, id));
@@ -41,13 +42,11 @@ public class ServicesRepositoryImpl implements ServicesRepository{
     }
 
     @Override
-    @SneakyThrows
     public void save(Services model) {
 
     }
 
     @Override
-    @SneakyThrows
     public void delete(Long id) {
 
     }
@@ -66,7 +65,6 @@ public class ServicesRepositoryImpl implements ServicesRepository{
 
 
     @Override
-    @SneakyThrows
     public List<Services> findAll() {
         return null;
     }

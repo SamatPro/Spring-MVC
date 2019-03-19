@@ -2,31 +2,28 @@ package ru.kpfu.itis.models;
 
 import lombok.*;
 
-@Setter
-@Getter
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@EqualsAndHashCode
 public class Client {
     private Long id;
     private String firstName;
     private String lastName;
     private String middleName;
-    private String gender;
+    private String email;
+    private String hashPassword;
+    private Boolean isMale;
     private String address;
+    private Date birthDate;
+    private Boolean newsSubscription;
     private Long phoneNumber;
+    private String review;
+    private List<Order> orderList;
 
-    @Override
-    public String toString() {
-        return "\nClient{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", gender='" + gender + '\'' +
-                ", address='" + address + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                "}";
-
-    }
 }
 
