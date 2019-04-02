@@ -24,7 +24,7 @@ public class AppAnnotationConfig {
   @Bean
   public FreeMarkerConfigurer freemarkerConfig() {
     FreeMarkerConfigurer freeMarkerConfigurer = new FreeMarkerConfigurer();
-    freeMarkerConfigurer.setTemplateLoaderPath("/WEB-INF/ftl/");
+    freeMarkerConfigurer.setTemplateLoaderPath("/WEB-INF/templates/ftl/");
     return freeMarkerConfigurer;
   }
 

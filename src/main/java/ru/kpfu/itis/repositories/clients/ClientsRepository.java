@@ -12,6 +12,4 @@ public interface ClientsRepository extends CrudRepository<Client> {
     Optional<Client> findOneByEmail(String email);
     Optional<Client> findClientByCookie(String cookieValue);
     List<Client> findAllOnlyWithName();
-
-
 }
