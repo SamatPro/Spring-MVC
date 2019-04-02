@@ -7,178 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="340f1734-e297-46da-9c89-835a5804558d" name="Default" comment="night">
-      <change afterPath="$PROJECT_DIR$/SpringProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/cooperativeOrders.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/invitationsPage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/employee/employeePage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/employee/orderProcessing.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/indexTTTT.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/reg.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/tours/toursPage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/consenting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/cooperativeOrders.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/invitationsPage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/ordersPage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/employeePage.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/orderProcessing.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/indexTTTT.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/regTTT.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca/_metadata_/metadata" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca/_metadata_/metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca/_metadata_/metadata.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca/_metadata_/metadata.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/user_page.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA_EE.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/context/ApplicationContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/context/ApplicationContextPrimitiveImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/context/Contexts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/ClientForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/ClientForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/EmployeeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/EmployeeForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/java/JavaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/java/JavaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/ComponentsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/ComponentsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/mapper/RowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/mapper/RowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/CooperativeTours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/CooperativeTours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/PersonalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Picture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Sight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Sight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/SightTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/SightTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Tour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesJdbcTemplateRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderCheckServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientOrdersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientOrdersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/CooperUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/CooperUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/InvitationsPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/InvitationsPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderConsent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderConsent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/SearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/SearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignOutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignUpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignUpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/tours/ToursOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/tours/ToursOrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/messages_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/cooperativeOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/cooperativeOrders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/invitationsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/invitationsPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/ordersPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/ordersPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/profilePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/profilePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee/employeePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee/employeePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee/orderProcessing.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee/orderProcessing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reg.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/tours/toursPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/tours/toursPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/cooperativeOrders.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/invitationsPage.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/ordersPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/ordersPage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/profilePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/profilePage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/employee/employeePage.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/employee/orderProcessing.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/reg.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/tours/toursPage.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/palms.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/img/palms.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/addClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/addClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/consenting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/scripts/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/application/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/application/BuildDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/application/ClientRepositoryDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client$ClientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client$ClientBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Services.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Services.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Sight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Sight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Tour.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Tour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Transport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/enums/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/CrudRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/cities/CitiesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/cities/CitiesRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/clients/ClientsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/clients/ClientsRepositoryImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/clients/ClientsRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/countries/CountriesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/countries/CountriesRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/employees/EmployeesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/employees/EmpoyeesRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/services/ServicesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/services/ServicesRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/tours/ToursRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/tours/ToursRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/transports/TransportsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/reposirories/transports/TranspostsRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/ClientsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/ClientsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/ClientsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/ClientsController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -245,91 +85,106 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientPageServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/CooperUpdateServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="587">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/InvitationsPageServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="221">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderConsent.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="51">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderDeleteServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderUpdateServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LogFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/SearchServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderCheckServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="51">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="510">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -362,9 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepositoryJdbcTemplateImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.java" />
@@ -381,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepositoryJdbcTemplateImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignUpClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/java/JavaConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/UsersController.java" />
@@ -394,10 +245,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/reg.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignIn.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignOutServlet.java" />
@@ -413,6 +262,12 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderCheckServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/user_page.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LogFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -446,8 +301,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -459,6 +314,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -535,72 +392,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="localization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="auths" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="cities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -621,36 +412,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itis" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itis" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="signing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
@@ -667,29 +428,6 @@
               <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="ru.kpfu.itis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -699,41 +437,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="ftl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Course" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -741,11 +449,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552730419745" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554199706529" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL&#10;MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="PostgreSQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="D:/Users/Самат/Desktop/ИТИС/JavaLab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JAVA_EE" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -1270,11 +978,15 @@
       <workItem from="1552598427093" duration="379000" />
       <workItem from="1552598844594" duration="10781000" />
       <workItem from="1552644743167" duration="5860000" />
+      <workItem from="1553065877738" duration="3296000" />
+      <workItem from="1553117769480" duration="851000" />
+      <workItem from="1553511972212" duration="2057000" />
+      <workItem from="1553627869415" duration="8373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1113005000" />
+    <option name="totallyTimeSpent" value="1127582000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1286,10 +998,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.82173914" visible="true" weight="0.22885907" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82173914" visible="true" weight="0.24026845" />
       <window_info id="Structure" order="1" weight="0.24899329" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -1301,7 +1013,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3243626" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4969743" visible="true" weight="0.5" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4969743" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.504298" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -1322,54 +1034,13 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.2510981" />
       <window_info anchor="right" id="JSF" order="6" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.2590604" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.16308725" />
       <window_info anchor="right" id="CDI" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info anchor="right" id="Palette&#9;" order="12" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82173914" visible="true" weight="0.22550336" />
-      <window_info id="Structure" order="1" weight="0.24899329" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.17826086" side_tool="true" weight="0.2671141" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.3243626" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4969743" visible="true" weight="0.43909347" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.504298" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.4969743" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.11043873" side_tool="true" weight="0.34369886" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3243626" />
-      <window_info anchor="bottom" id="Database Console" order="11" weight="0.33994335" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.8895613" weight="0.31444758" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Spring" order="15" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3286119" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="17" />
-      <window_info anchor="right" id="Maven" order="0" weight="0.3295302" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.2510981" />
-      <window_info anchor="right" id="JSF" order="6" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.2590604" />
-      <window_info anchor="right" id="CDI" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="right" id="Capture Analysis" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-      <window_info anchor="right" id="Palette&#9;" order="12" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1379,29 +1050,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="night" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/JAVA_EE_war.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/JAVA_EE_war_exploded.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/SpringProject_war.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/SpringProject_war_exploded.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="157" column="21" selection-start-line="157" selection-start-column="21" selection-end-line="157" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/UsersController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-591">
@@ -1423,13 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepositoryJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-187">
@@ -1441,20 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1495,31 +1123,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -1536,23 +1143,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/index.ftl">
@@ -1576,42 +1166,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="83" column="47" lean-forward="true" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2151#2152#0" expanded="true" />
-            <element signature="e#2169#2170#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1636,20 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/tours/ToursOrderServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientOrdersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1660,7 +1204,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientPageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1674,7 +1218,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/InvitationsPageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1709,7 +1253,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -1723,7 +1274,177 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/user_page.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="33" column="111" selection-start-line="33" selection-start-column="111" selection-end-line="33" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/tours/ToursOrderServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7a4a5681-31c2-46ed-b5e9-07c6288a95ca.SCHEMA:postgres.public">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7a4a5681-31c2-46ed-b5e9-07c6288a95ca.SCHEMA:postgres.public</OriginalElement>
+          <nodes>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.service_db</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.sight</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.client_db</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.sights_types</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.types_table</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.employee_db</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.city</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.order_db</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.reviews</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.personal_info</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.tour_db</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.pictures</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.auth</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.country</node>
+            <node x="" y="">7a4a5681-31c2-46ed-b5e9-07c6288a95ca.TABLE:postgres.public.cooperative_tours</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5936269915651359" x="518.7867066624566" y="546.1664035364698" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1598">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LogFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
         </state>
       </provider>
     </entry>

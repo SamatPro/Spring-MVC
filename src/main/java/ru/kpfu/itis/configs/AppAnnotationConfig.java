@@ -38,47 +38,6 @@ public class AppAnnotationConfig {
     return viewResolver;
   }
 
-  /*@Bean
-  public InternalResourceViewResolver cssViewResolver(){
-    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-    viewResolver.setPrefix("WEB-INF/resources/css/");
-    viewResolver.setSuffix(".css");
-    return viewResolver;
-  }*/
-
-  /*@Bean
-  public InternalResourceViewResolver jsViewResolver(){
-    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-    viewResolver.setPrefix("WEB-INF/resources/js/");
-    viewResolver.setSuffix(".js");
-    return viewResolver;
-  }*/
-
-  /*@Bean
-  public InternalResourceViewResolver scriptsViewResolver(){
-    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-    viewResolver.setPrefix("WEB-INF/resources/scripts/");
-    viewResolver.setSuffix(".js");
-    return viewResolver;
-  }
-
-  @Bean
-  public InternalResourceViewResolver imagesViewResolver(){
-    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-    viewResolver.setPrefix("WEB-INF/resources/img/");
-    viewResolver.setSuffix(".jpg");
-    return viewResolver;
-  }*/
-
-
-
-  /*@Bean
-  public ViewResolver viewResolver(){
-    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-    viewResolver.setPrefix("/WEB-INF/jsp/");
-    viewResolver.setSuffix(".jsp");
-    return viewResolver;
-  }*/
   @Bean
   public DataSource dataSourse(){
     DriverManagerDataSource dataSource = new DriverManagerDataSource();

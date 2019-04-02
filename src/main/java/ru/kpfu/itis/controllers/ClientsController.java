@@ -3,6 +3,7 @@ package ru.kpfu.itis.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ru.kpfu.itis.forms.ClientForm;
@@ -10,6 +11,7 @@ import ru.kpfu.itis.models.Client;
 import ru.kpfu.itis.services.client.ClientService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class ClientsController{
@@ -60,6 +62,13 @@ public class ClientsController{
   @RequestMapping(value = "/signIn", method = RequestMethod.GET)
   public String signIn(){
     return "login";
+  }
+
+  @RequestMapping(value = "/users", method = RequestMethod.GET)
+  public String getUsersPage(ModelMap modelMap) {
+    List<Client> clients = clientService.findAllByFirstName("%");
+    modelMap.addAttribute("clients", clients);
+    return "user_page";
   }
 
 }
