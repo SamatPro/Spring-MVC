@@ -29,15 +29,7 @@
                 <a href="home"><img src="img/travel.png" width=350 alt="travel"></a>
             </div>
             <div class="col-lg-7 ml-auto">
-                <li class="menu__item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ${locale["select.language"]}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                        <a class="dropdown-item" href="?lang=Ru">${locale["russian-lang"]}</a>
-                        <a class="dropdown-item" href="?lang=En">${locale["english-lang"]}</a>
-                    </div>
-                </li>
+
                 <ul class="menu d-flex justify-content-center">
                     <li class="menu__item">
                         <a href="myInvitations">
@@ -174,8 +166,8 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">${locale["close"]}</button>
-                            <button type="button" onclick='addToOrder(${city.id}, this.id)' class="btn btn-lg btn-block btn-outline-primary" id="button${city.id}">${locale["send"]}</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть/button>
+                            <button type="button" onclick='addToOrder(${city.id}, this.id)' class="btn btn-lg btn-block btn-outline-primary" id="button${city.id}">Отправить</button>
                         </div>
                     </div>
                 </div>
@@ -218,8 +210,8 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">${locale["close"]}</button>
-                            <button onclick="sendTo(${city.id})" formmethod="post" type="button" class="btn btn-lg btn-block btn-outline-primary" id="btnn${city.id}">${locale["send"]}</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            <button onclick="sendTo(${city.id})" formmethod="post" type="button" class="btn btn-lg btn-block btn-outline-primary" id="btnn${city.id}">Отправить</button>
                         </div>
                     </div>
                 </div>

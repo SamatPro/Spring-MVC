@@ -66,6 +66,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void signUp(ClientForm clientForm) {
+        System.out.println(clientForm.toString());
         Client client = Client.builder()
                 .lastName(clientForm.getLastName())
                 .firstName(clientForm.getFirstName())
@@ -118,10 +119,12 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public boolean isExistByCookie(String cookieValue) {
-        if(!authRepository.findByCookieValue(cookieValue).equals(Optional.empty())){
+        /*if(!authRepository.findByCookieValue(cookieValue).equals(Optional.empty())){
             return true;
         }
-        return false;
+        return false;*/
+        System.out.println(authRepository.findByCookieValue(cookieValue).isPresent());
+        return !authRepository.findByCookieValue(cookieValue).equals(Optional.empty());
     }
 
     @Override

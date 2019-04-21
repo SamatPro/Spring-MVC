@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-@Component
+@Component("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
 
 //    private ApplicationContext context;

@@ -21,15 +21,7 @@
                 <a href="home"><img src="img/travel.png" width=350 alt="travel"></a>
             </div>
             <div class="col-lg-7 ml-auto">
-                <li class="menu__item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ${locale["select.language"]}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                        <a class="dropdown-item" href="?lang=Ru">${locale["russian-lang"]}</a>
-                        <a class="dropdown-item" href="?lang=En">${locale["english-lang"]}</a>
-                    </div>
-                </li>
+
                 <ul class="menu d-flex justify-content-center">
                     <li class="menu__item">
                         <a href="myInvitations">
@@ -38,12 +30,12 @@
                     </li>
                     <li class="menu__item">
                         <a href="orders">
-                            ${locale["my.orders"]}
+                            Мои заказы
                         </a>
                     </li>
                     <li class="menu__item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ${locale["signup.navigation"]}
+                            Навигация
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 
@@ -55,7 +47,7 @@
                     </li>
                     <li class="menu__item">
                         <a href="signOut">
-                            ${locale["log.out"]}
+                            Выйти
                         </a>
                     </li>
 
@@ -118,12 +110,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature__text" align="center">
-                    <p>${locale["text.about.kazan"]}
-                    </p>
-                    <p>${locale["text.about.moscow"]}
-                    </p>
-                    <p>${locale["text.about.piter"]}
-                    </p>
+                    <p>та же самая херня</p>
                 </div>
             </div>
         </div>
@@ -133,9 +120,9 @@
 <section class="contact">
     <div class="container">
         <div class="col-lg-12">
-            <h1 align="center">${locale["signup.feedback"]}</h1><br>
-            <h3 align="center">${locale["question.text"]}</h3>
-            <button type="button" class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal">${locale["send"]}</button>
+            <h1 align="center">Оставить отзыв</h1><br>
+            <h3 align="center">авыпыавы</h3>
+            <button type="button" class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal">Отправить</button>
         </div>
     </div>
 </section>
@@ -144,26 +131,26 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">${locale["new.question"]}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Текст</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <label for="recipient-name" class="col-form-label">${locale["your.number"]}</label>
                         <input type="text" class="form-control" id="recipient-name">
-                    </div>
+                    </div>-->
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">${locale["message"]}</label>
+                        <label for="message-text" class="col-form-label">Сообщение</label>
                         <textarea class="form-control" id="message-text"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">${locale["close"]}</button>
-                <button type="button" class="btn btn-primary">${locale["send"]}</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Отправить</button>
             </div>
         </div>
     </div>

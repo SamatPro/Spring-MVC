@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
-    <title>{locale["signup.title"]}</title>
+    <title>Туры</title>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -22,7 +22,7 @@
                 <a href="home"><img src="img/travel.png" width=350 alt="travel"></a>
             </div>
             <div class="col-lg-5 ml-auto">
-                <li class="menu__item dropdown">
+                <#--<li class="menu__item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {locale["select.language"]}
                     </a>
@@ -30,26 +30,26 @@
                         <a class="dropdown-item" href="?lang=Ru">{locale["russian-lang"]}</a>
                         <a class="dropdown-item" href="?lang=En">{locale["english-lang"]}</a>
                     </div>
-                </li>
+                </li>-->
                 <ul class="menu d-flex justify-content-center">
                     <li class="menu__item">
                         <a href="#">
-                            {locale["signup.reviews"]}
+                            Отзывы
                         </a>
                     </li>
                     <li class="menu__item">
                         <a href="#">
-                            {locale["about.us"]}
+                            О нас
                         </a>
                     </li>
                     <li class="menu__item">
                         <a href="signIn">
-                            {locale["login.in"]}
+                            Вход
                         </a>
                     </li>
                     <li class="menu__item">
                         <a href="signUp">
-                            {locale["registration"]}
+                            Регистрация
                         </a>
                     </li>
 
@@ -60,13 +60,13 @@
         <div class="row">
             <div class="col-lg-6 offer">
                 <h1 class="offer__title">
-                    {locale["quote"]}
+                    Lorem ipsum
                 </h1>
                 <div class="offer__intro">
-                    {locale["quote.exp"]}
+                    Some lorem ipsum
                 </div>
                 <p class="offer__text">
-                    {locale["quote.author"]}
+                    Upset lirom something
                 </p>
             </div>
             <div class="col-lg-2 ml-auto shuttle">
@@ -114,11 +114,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature__text" align="center">
-                    <p>{locale["text.about.kazan"]}
+                    Фотографии городов должны случайным образом выводиться
+                    каждый раз
+                    <p>Что то интересное
+                        например, мы уже обработали ххх заказов
                     </p>
-                    <p>{locale["text.about.moscow"]}
+                    <p>Тоже что то написано
                     </p>
-                    <p>{locale["text.about.piter"]}
+                    <p>Что то интересное
                     </p>
                 </div>
             </div>
@@ -129,9 +132,9 @@
 <section class="contact">
     <div class="container">
         <div class="col-lg-12">
-            <h1 align="center">{locale["signup.feedback"]}</h1><br>
-            <h3 align="center">{locale["question.text"]}</h3>
-            <button type="button" class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal">{locale["send"]}</button>
+            <h1 align="center">Оставить отзыв</h1><br>
+            <h3 align="center">Текст отзыва</h3>
+            <button type="button" class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal">Отправить</button>
         </div>
     </div>
 </section>
@@ -140,7 +143,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{locale["new.question"]}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Оставить отзыв</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -148,18 +151,18 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">{locale["your.number"]}</label>
+                        <label for="recipient-name" class="col-form-label">Ваш никнейм</label>
                         <input type="text" class="form-control" id="recipient-name">
                     </div>
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">{locale["message"]}</label>
+                        <label for="message-text" class="col-form-label">Сообщение</label>
                         <textarea class="form-control" id="message-text"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">{locale["close"]}</button>
-                <button type="button" class="btn btn-primary">{locale["send"]}</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Отправить</button>
             </div>
         </div>
     </div>
@@ -170,8 +173,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="credits">
-                    Made by Samat Zaydullin<br>
-                    All rights reserved
+                    Сделано Саматом Зайдуллиным<br>
+                    Все права защищены
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-@ComponentScan("ru.kpfu.itis.controllers")
+@ComponentScan({"ru.kpfu.itis.controllers", "ru.kpfu.itis.filter"})
 @EnableWebMvc
 public class WebConfig extends WebMvcConfigurerAdapter {
   @Override

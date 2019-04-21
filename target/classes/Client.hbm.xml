@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.kpfu.itis.models.Client" table="client_db">
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="firstName" column="first_name"/>
+        <property name="lastName" column="last_name"/>
+        <property name="middleName" column="middle_name"/>
+        <property name="address" column="address"/>
+        <property name="email" column="email"/>
+        <property name="hashPassword" column="hash_password"/>
+        <property name="phoneNumber" column="phone_number"/>
+
+
+        <set name="orderList" table="order_db" cascade="save-update">
+            <key column="id"/>
+            <one-to-many class="ru.kpfu.itis.models.Order"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>

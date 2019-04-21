@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.kpfu.itis.models.Auth" table="auth">
+
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="cookieValue" column="cookie_value"/>
+
+        <one-to-one name="client" class="ru.kpfu.itis.models.Client" cascade="save-update"/>
+
+        <one-to-one name="employee" class="ru.kpfu.itis.models.Employee" cascade="save-update"/>
+
+    </class>
+
+</hibernate-mapping>

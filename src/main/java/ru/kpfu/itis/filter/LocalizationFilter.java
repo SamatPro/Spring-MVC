@@ -1,7 +1,10 @@
 package ru.kpfu.itis.filter;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -42,12 +45,15 @@ public class LocalizationFilter implements Filter{
         }
 
 
-        Map<String, String> locale = (Map<String, String>) request.getServletContext().getAttribute("localeRu"/* + lang*/);
+        Map<String, String> locale = (Map<String, String>) request.getServletContext().getAttribute("locale" + lang);
         request.setAttribute("locale", locale);
-        new ModelMap().addAttribute("locale", locale);
-//        System.out.println(locale.get("quote.author"));
+//        new ModelMap().addAttribute("locale", locale);
+//        locale.put("signup.title","Заголовок");
+//        System.out.println(locale.get("signup.title"));
 
         System.out.println("FILTER FROM LOCALIZATION!!! UUUH");
+        request.setCharacterEncoding("UTF-8");
+//      System.out.println(request.getCharacterEncoding());
 
         filterChain.doFilter(request, response);
     }

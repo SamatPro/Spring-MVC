@@ -14,6 +14,7 @@ import java.sql.Date;
 public class ClientForm {
     String email;
     String password;
+    String repassword;
     String firstName;
     String lastName;
     String middleName;
@@ -21,5 +22,5 @@ public class ClientForm {
     Long phoneNumber;
     Boolean isMale;
     Boolean newsSubscription;
-
+    Boolean consent;
 }

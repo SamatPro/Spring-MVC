@@ -1,5 +1,8 @@
 package ru.kpfu.itis.filter;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import ru.kpfu.itis.services.client.ClientService;
 import ru.kpfu.itis.services.employee.EmployeeService;
 
@@ -10,15 +13,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 //@WebFilter(urlPatterns = {"/signIn", "/signUp", "/home"})
+@Component
 public class SignInFilter implements Filter {
 
+    @Autowired
+    @Qualifier(value = "clientService")
     private ClientService clientService;
+    @Autowired
+    @Qualifier(value = "employeeService")
     private EmployeeService employeeService;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        clientService = (ClientService) filterConfig.getServletContext().getAttribute("clientService");
-        employeeService = (EmployeeService) filterConfig.getServletContext().getAttribute("employeeService");
+//        clientService = (ClientService) filterConfig.getServletContext().getAttribute("clientService");
+//        employeeService = (EmployeeService) filterConfig.getServletContext().getAttribute("employeeService");
     }
 
     @Override
@@ -28,11 +36,14 @@ public class SignInFilter implements Filter {
 
         Cookie cookies[] = request.getCookies();
 
+
         if(cookies != null){
             for (Cookie cookie : cookies){
                 if(cookie.getName().equals("auth")){
+                    System.out.println(clientService);
+                    System.out.println(cookie.getValue());
                     if (clientService.isExistByCookie(cookie.getValue())) {
-                        response.setContentType("text/html");
+//                        response.setContentType("text/html");
                         response.sendRedirect("/profilePage");
                         return;
                     }

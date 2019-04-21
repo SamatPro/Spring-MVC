@@ -14,6 +14,7 @@ public class LocaleListener implements ServletContextListener {
         Map<String, String> localeRu = Localizations.loadLocalization("ru");
         Map<String, String> localeEn = Localizations.loadLocalization("en");
         context.setAttribute("localeRu", localeRu);
+        //localeresolver
         context.setAttribute("localeEn", localeEn);
 
     }
