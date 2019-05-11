@@ -23,7 +23,7 @@ public class AuthFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-//        clientService = new ClientServiceImpl();
+
     }
 
     @Override
@@ -61,26 +61,6 @@ public class AuthFilter implements Filter {
             response.sendRedirect("/signIn");
             return;
         }
-        /*Cookie cookies[] = request.getCookies();
-
-        if(cookies != null){
-            for (Cookie cookie : cookies){
-                if(cookie.getName().equals("auth")){
-                    if (clientService.isExistByCookie(cookie.getValue())) {
-                        filterChain.doFilter(request, response);
-                        return;
-                    }
-                    *//*if (employeeService.isExistByCookie(cookie.getValue())){
-                        filterChain.doFilter(request, response);
-                        return;
-                    }*//*
-                }
-            }
-            response.sendRedirect("/signIn");
-            return;
-        }
-        response.sendRedirect("/signIn");
-        return;*/
     }
 
 

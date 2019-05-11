@@ -23,8 +23,7 @@ public class SignInFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-//        clientService = (ClientService) filterConfig.getServletContext().getAttribute("clientService");
-//        employeeService = (EmployeeService) filterConfig.getServletContext().getAttribute("employeeService");
+
     }
 
     @Override
@@ -81,28 +80,6 @@ public class SignInFilter implements Filter {
             filterChain.doFilter(request, response);
             return;
         }
-
-        /*Cookie cookies[] = request.getCookies();
-
-        if(cookies != null){
-            for (Cookie cookie : cookies){
-                if(cookie.getName().equals("auth")){
-                    if (clientService.isExistByCookie(cookie.getValue())) {
-                        response.sendRedirect("/profilePage");
-                        return;
-                    }
-                    if (employeeService.isExistByCookie(cookie.getValue())){
-                        response.sendRedirect("/adminPage");
-                        return;
-                    }
-                }
-            }
-            filterChain.doFilter(request, response);
-//            response.sendRedirect("/Page");
-            return;
-        }*/
-//        response.sendRedirect("Page");
-
 
     }
 
