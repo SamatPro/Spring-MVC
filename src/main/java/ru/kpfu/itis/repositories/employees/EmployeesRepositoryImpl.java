@@ -23,12 +23,12 @@ public class EmployeesRepositoryImpl implements EmployeesRepository{
     private JdbcTemplate jdbcTemplate;
 
     private static final String SQL_SELECT_EMPLOYEE_BY_COOKIE =
-            "SELECT * FROM employee_db LEFT JOIN auth ON employee_db.id=auth.employee_id WHERE auth.cookie_value=?;";
+            "SELECT * FROM employee LEFT JOIN auth ON employee.id=auth.employee_id WHERE auth.cookie_value=?;";
 
-    private static final String SQL_INSERT_QUERY = "INSERT INTO employee_db(login, hash_password, last_name, first_name, middle_name, position) VALUES (?, ?, ?, ?, ?, ?);";
+    private static final String SQL_INSERT_QUERY = "INSERT INTO employee(login, hash_password, last_name, first_name, middle_name, position) VALUES (?, ?, ?, ?, ?, ?);";
     private static final String DELETE_BY_ID = "DELETE FROM ONLY employee_db WHERE id=?;";
-    private static final String SELECT_EMPLOYEE_BY_LOGIN = "SELECT * FROM employee_db WHERE login = ?;";
-    private static final String SELECT_EMPLOYEE_BY_ID = "SELECT * FROM employee_db WHERE id = ?;";
+    private static final String SELECT_EMPLOYEE_BY_LOGIN = "SELECT * FROM employee WHERE login = ?;";
+    private static final String SELECT_EMPLOYEE_BY_ID = "SELECT * FROM employee WHERE id = ?;";
 
 
     @Autowired

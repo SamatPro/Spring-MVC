@@ -7,80 +7,273 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="340f1734-e297-46da-9c89-835a5804558d" name="Default" comment="night">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/RootConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/DefaultController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/UtfFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/ClientValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Auth.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/City.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Client.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Employee.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Order.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Picture.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Services.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/errors.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthJpaRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsJpaRepositoryCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsJpaRepositoryCustomImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/reviews/ReviewsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/reviews/ReviewsRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/ServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reviews.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a4a5681-31c2-46ed-b5e9-07c6288a95ca.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/RootConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/DefaultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LogFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/ClientForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/ClientForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/LoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/java/JavaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/ComponentsListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/mapper/RowMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/CooperativeTours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/CooperativeTour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/PersonalInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Picture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Sight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/SightTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cities/CitiesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderCheckServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientOrdersServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientPageServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/CooperUpdateServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/InvitationsPageServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderConsent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderDeleteServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderUpdateServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/SearchServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignOutServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignUpClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/tours/ToursOrderServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Auth.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/City.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Client.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Employee.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Order.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Picture.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Services.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/errors.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/messages_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/cooperativeOrders.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/invitationsPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/invitationsPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/ordersPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/ordersPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/profilePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/profilePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/cooperativeOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/cooperativeOrders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/invitationsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/invitationsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/ordersPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/ordersPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/profilePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/profilePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/tours/toursPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/tours/toursPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/cooperativeOrders.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/invitationsPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/invitationsPage.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/ordersPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/ordersPage.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/employeePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/employeePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/orderProcessing.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/orderProcessing.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/indexTTTT.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/Auth.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/City.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/Client.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/Employee.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/Order.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/Picture.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/Services.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/errors.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/messages/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/messages/messages_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru.kpfu.itis/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru.kpfu.itis/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru.kpfu.itis/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru.kpfu.itis/context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/app/WebInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/app/WebInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/configs/RootConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/ClientsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/ClientsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/DefaultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/DefaultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/controllers/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/filter/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/filter/LocalizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/filter/LocalizationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/filter/SignInFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/filter/SignInFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/ClientForm$ClientFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/ClientForm$ClientFormBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/ClientForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/ClientForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/listeners/LocaleListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/listeners/LocaleListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/localization/Localizations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/localization/Localizations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/LoginForm$LoginFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/LoginForm$LoginFormBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/forms/LoginForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/java/JavaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/listeners/ComponentsListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/listeners/LocaleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/localization/Localizations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/mapper/RowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Auth$AuthBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Auth$AuthBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Auth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Auth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/City$CityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/City$CityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Client$ClientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Client$ClientBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/CooperativeTours$CooperativeToursBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/CooperativeTours.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Country$CountryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Country$CountryBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Country.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Employee$EmployeeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Employee$EmployeeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Order$OrderBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/PersonalInfo$PersonalInfoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/PersonalInfo$PersonalInfoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/PersonalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/PersonalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Picture$PictureBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Picture$PictureBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Picture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Picture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Services$ServicesBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Services.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Sight$SightBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Sight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/SightTypes$SightTypesBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/SightTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Tour$TourBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Tour$TourBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Tour.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/models/Tour.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/pictures/PicturesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/pictures/PicturesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/services/ServicesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/services/ServicesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/client/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/client/ClientService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/client/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/client/ClientServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/employee/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/employee/EmployeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/employee/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/services/employee/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/dispatcherServlet-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/client/invitationsPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/client/invitationsPage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/client/ordersPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/client/ordersPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/servlets/client/InvitationsPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/servlets/client/InvitationsPageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/validator/LoginValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/classes/ru/kpfu/itis/validator/LoginValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/cooperativeOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/cooperativeOrders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/invitationsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/invitationsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/ordersPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/ordersPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/profilePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/client/profilePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/tours/toursPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/jsp/tours/toursPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/lib/spring-tx-5.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/resources/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/resources/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/client/profilePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/client/profilePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/employee/employeePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/employee/employeePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/employee/orderProcessing.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/employee/orderProcessing.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/index.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/reg.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/reg.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/tours/toursPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringProject-0.1/WEB-INF/templates/ftl/tours/toursPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Auth.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/City.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Employee.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Order.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Picture.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/errors.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages/messages_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru.kpfu.itis/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru.kpfu.itis/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru.kpfu.itis/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru.kpfu.itis/context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/app/WebInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/app/WebInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/AppAnnotationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/configs/RootConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/ClientsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/ClientsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/DefaultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/DefaultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/controllers/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/filter/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/filter/LocalizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/filter/LocalizationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/filter/SignInFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/filter/SignInFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/ClientForm$ClientFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/ClientForm$ClientFormBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/ClientForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/ClientForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/listeners/LocaleListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/listeners/LocaleListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/localization/Localizations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/localization/Localizations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/LoginForm$LoginFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/LoginForm$LoginFormBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/forms/LoginForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/java/JavaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/listeners/ComponentsListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/listeners/LocaleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/localization/Localizations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/mapper/RowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Auth$AuthBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Auth$AuthBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Auth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Auth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/City$CityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/City$CityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client$ClientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client$ClientBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/CooperativeTours$CooperativeToursBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/CooperativeTours.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Country$CountryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Country$CountryBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Country.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Employee$EmployeeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Employee$EmployeeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Order$OrderBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/PersonalInfo$PersonalInfoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/PersonalInfo$PersonalInfoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/PersonalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/PersonalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Picture$PictureBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Picture$PictureBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Picture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Picture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Services$ServicesBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Services.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Sight$SightBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Sight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/SightTypes$SightTypesBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/SightTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Tour$TourBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Tour$TourBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Tour.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/models/Tour.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/pictures/PicturesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/pictures/PicturesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/services/ServicesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/services/ServicesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/client/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/client/ClientService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/client/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/client/ClientServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/employee/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/employee/EmployeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/employee/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/services/employee/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/servlets/client/InvitationsPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/servlets/client/InvitationsPageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/validator/LoginValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/validator/LoginValidator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -169,7 +362,7 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="client_db: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="client: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -179,7 +372,47 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="employee_db: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="cooperative_tour: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="country: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="employee: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="orders: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="personal_info: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -191,56 +424,45 @@
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="pictures: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="reviews: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="service: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tour: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/City.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="107" selection-start-line="27" selection-start-column="107" selection-end-line="27" selection-end-column="107" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="165" selection-start-line="165" selection-end-line="165" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Picture.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Services.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-            </state>
+            <state relative-caret-position="-1903" />
           </provider>
         </entry>
       </file>
@@ -253,9 +475,9 @@
         <option value="Jsp File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Interface" />
         <option value="spring-beans.schema" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -273,57 +495,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientPageServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/CooperUpdateServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/InvitationsPageServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderConsent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderDeleteServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/OrderUpdateServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/SearchServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderCheckServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/user_page.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LogFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/localization/Localizations.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/UtfFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/errors.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validators/ClientValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/invitationsPage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/ClientForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/RootConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/ClientValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/ordersPage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/EmployeeController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/DefaultController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Order.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Picture.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Services.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Auth.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Client.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/City.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Employee.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/City.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsJpaRepositoryCustom.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Tour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Review.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Country.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsJpaRepositoryCustomImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthRepositoryJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthJpaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/auths/AuthJpaRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Auth.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/PersonalInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/reviews/ReviewsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/reviews/ReviewsRepositoryJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/ServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reviews.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/search.js" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/DefaultController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/CooperativeTour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/invitationsPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/ordersPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/profilePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/invitationsPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/ordersPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/employeePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl" />
       </list>
     </option>
   </component>
@@ -357,9 +579,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="592" />
-    <option name="y" value="-28" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -371,9 +593,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Course" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -423,6 +644,42 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -430,6 +687,163 @@
               <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="auths" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="cities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="clients" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="cooperativeTours" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="countries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="employees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="pictures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="reviews" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="tours" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itis" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -438,7 +852,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
+              <item name="ru.kpfu.itis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
@@ -463,16 +877,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
@@ -484,68 +888,30 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ftl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ftl" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ftl" type="462c0819:PsiDirectoryNode" />
-              <item name="tours" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555533916129" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557577226930" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL&#10;MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="PostgreSQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Проектная работа/wellness_boot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaFxChat" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -630,13 +996,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.kpfu.itis.servlets.examples.Sock" />
-      <module name="Java_Spring" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.kpfu.itis.example.Main" />
+      <module name="SpringProject" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.kpfu.itis.servlets.examples.*" />
+          <option name="PATTERN" value="ru.kpfu.itis.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -809,20 +1175,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Sock" />
       <item itemvalue="Application.CalculClient" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.SwingAppDemo" />
       <item itemvalue="Application.ClientRepositoryDemo" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Tomcat Server.Tom" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ClientRepositoryDemo" />
         <item itemvalue="Application.SwingAppDemo" />
         <item itemvalue="Application.CalculClient" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.Sock" />
       </list>
     </recent_temporary>
   </component>
@@ -1077,12 +1443,17 @@
       <workItem from="1555420709797" duration="4916000" />
       <workItem from="1555537486613" duration="1307000" />
       <workItem from="1555666047343" duration="619000" />
-      <workItem from="1555841031646" duration="1220000" />
+      <workItem from="1555841031646" duration="7266000" />
+      <workItem from="1556112099767" duration="20015000" />
+      <workItem from="1556304458517" duration="636000" />
+      <workItem from="1556311000057" duration="28754000" />
+      <workItem from="1556739676316" duration="16183000" />
+      <workItem from="1557309532189" duration="10778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1215996000" />
+    <option name="totallyTimeSpent" value="1298408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1094,10 +1465,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82173914" visible="true" weight="0.23959732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82173914" visible="true" weight="0.20469798" />
       <window_info id="Structure" order="1" weight="0.24899329" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -1105,24 +1476,25 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Web" order="7" sideWeight="0.17826086" side_tool="true" weight="0.2671141" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.3243626" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4969743" visible="true" weight="0.21954674" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.504298" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.4969743" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.11043873" side_tool="true" weight="0.34369886" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3243626" />
-      <window_info anchor="bottom" id="Database Console" order="11" weight="0.33994335" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.8895613" weight="0.31444758" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Spring" order="15" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3286119" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="17" />
+      <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="3" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="4" visible="true" weight="0.3243626" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4969743" weight="0.12322946" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.504298" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4969743" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.11043873" side_tool="true" weight="0.34369886" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3243626" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.24362606" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.8895613" weight="0.31444758" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="16" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="17" weight="0.3286119" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="18" />
       <window_info anchor="right" id="Maven" order="0" weight="0.3295302" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1130,13 +1502,55 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.2510981" />
       <window_info anchor="right" id="JSF" order="6" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.07919463" />
+      <window_info anchor="right" id="Database" order="7" weight="0.2751678" />
       <window_info anchor="right" id="CDI" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info anchor="right" id="Palette&#9;" order="12" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.82173914" visible="true" weight="0.20469798" />
+      <window_info id="Structure" order="1" weight="0.24899329" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.17826086" side_tool="true" weight="0.2671141" />
+      <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="3" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3243626" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4969743" visible="true" weight="0.12322946" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.504298" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4969743" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.11043873" side_tool="true" weight="0.34369886" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3243626" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.24362606" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.8895613" weight="0.31444758" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="16" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="17" weight="0.3286119" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="18" />
+      <window_info anchor="right" id="Maven" order="0" weight="0.3295302" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.2510981" />
+      <window_info anchor="right" id="JSF" order="6" />
+      <window_info active="true" anchor="right" id="Database" order="7" visible="true" weight="0.2758389" />
+      <window_info anchor="right" id="CDI" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Palette&#9;" order="12" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1146,386 +1560,327 @@
     <option name="LAST_COMMIT_MESSAGE" value="night" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientPageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/client/ClientOrdersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="30" column="73" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="30" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/OrderProcessingServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2017">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="221" column="10" selection-start-line="82" selection-end-line="221" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/java/JavaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="112" column="1" lean-forward="true" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/signing/SignIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="88" column="9" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="88" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/EmployeeForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/ClientForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/forms/LoginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/ComponentsListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/listeners/LocaleListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-489" />
+        <state relative-caret-position="68">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/RootConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/reviews/ReviewsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/clients/ClientsRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1560">
+          <caret line="25" column="115" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/cooperativeTours/CooperativeToursRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-863">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/countries/CountriesRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/employees/EmployeesRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1135">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/orders/OrdersRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1495">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/pictures/PicturesRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-914">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/reviews/ReviewsRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-407">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/services/ServicesRepositoryJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="-526">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7a4a5681-31c2-46ed-b5e9-07c6288a95ca/database/postgres/schema/public/table/client_db">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7a4a5681-31c2-46ed-b5e9-07c6288a95ca/database/postgres/schema/public/table/auth">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="25" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/ClientValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/configs/AppAnnotationConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/repositories/tours/ToursRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/client/ClientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1053">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AuthFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/UtfFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/DefaultController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/employee/EmployeeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+        <state relative-caret-position="-1121">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/AdminFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/servlets/admin/AdminPageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="68">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/controllers/ClientsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/LocalizationFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/services/ServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/filter/SignInFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/ClientValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+        <state relative-caret-position="52">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/errors.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/validator/LoginValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="17" />
+        <state relative-caret-position="85">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/cooperativeOrders.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ru.kpfu.itis/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Order.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/invitationsPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="-986">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Employee.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/ordersPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-238">
+          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Employee.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/cooperativeOrders.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="-1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/client/profilePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/City.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/invitationsPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="-1339">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Client.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/ordersPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="-221">
+          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/client/profilePage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-2274">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Auth.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/orderProcessing.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="-170" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/employee/employeePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1424">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/models/Auth.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/indexTTTT.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
+        <state relative-caret-position="-510" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/City.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reviews.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
+        <state relative-caret-position="-1543" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Picture.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Services.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/app/WebInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="107" selection-start-line="27" selection-start-column="107" selection-end-line="27" selection-end-column="107" />
+        <state relative-caret-position="-319">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/consenting.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/addClient.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/tours/toursPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        <state relative-caret-position="-3246">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/ftl/reg.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1903" />
       </provider>
     </entry>
   </component>

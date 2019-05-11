@@ -21,6 +21,9 @@ public class PicturesRepositoryJdbcTemplateImpl implements PicturesRepository{
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+    private static final String FIND_RANDOM_PICTURES =
+            "SELECT href FROM pictures ORDER BY RANDOM() LIMIT 5";
+
     private static final String FIND_ALL_PICTURES_BY_COUNTRY =
             "SELECT city.id AS city_id, pictures.id AS pic_id, href FROM country JOIN city ON country.id=city.country_id JOIN pictures ON city.id=pictures.city_id WHERE country.id=?;";
 
@@ -37,6 +40,11 @@ public class PicturesRepositoryJdbcTemplateImpl implements PicturesRepository{
     @Override
     public List<Picture> findAllPicturesByCountryName(String name) {
         return jdbcTemplate.query(FIND_ALL_PICTURES_BY_COUNTRY_NAME, picturesRowMapper, name);
+    }
+
+    @Override
+    public List<Picture> findSomeRandomPictures() {
+        return jdbcTemplate.query(FIND_RANDOM_PICTURES, getPicturesRowMapper);
     }
 
     @Override
@@ -64,6 +72,7 @@ public class PicturesRepositoryJdbcTemplateImpl implements PicturesRepository{
         return null;
     }
 
+
     private RowMapper picturesRowMapper = (resultSet, i) ->Picture.builder()
             .id(resultSet.getLong("pic_id"))
             .city(
@@ -73,4 +82,9 @@ public class PicturesRepositoryJdbcTemplateImpl implements PicturesRepository{
             )
             .href(resultSet.getString("href"))
             .build();
+
+    private RowMapper getPicturesRowMapper = (resultSet, i) -> Picture.builder()
+            .href(resultSet.getString("href"))
+            .build();
+
 }

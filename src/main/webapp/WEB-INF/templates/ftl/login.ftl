@@ -22,7 +22,7 @@
             <div class="col-lg-5 ml-auto">
                 <ul class="menu d-flex justify-content-center">
                     <li class="menu__item">
-                        <a href="#">
+                        <a href="reviews">
                             Отзывы
                         </a>
                     </li>
@@ -67,13 +67,6 @@
 
                 <input class="btn btn-lg btn-primary btn-block" name="submit" type="submit" value="Войти">
 
-
-<#--
-                <div class="signInError" style="color: red">
-                    <#if signInError??>
-                        ${signInError}
-                    </#if>
-                </div>-->
                 <p class="mt-5 mb-3 text-muted text-center"><a href="signUp">Зарегистрироваться</a></p>
             </form>
         </div>

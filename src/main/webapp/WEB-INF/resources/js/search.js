@@ -29,8 +29,6 @@ function search(buttid, cityId) {
 
         }).fail(function () {
 
-            /*document.getElementById(elemId).style.backgroundColor='red';
-            document.getElementById(elemId).textContent='Не добавлен';*/
         });
     }else{
         let contentTableDiv = document.getElementById('inner'+cityId);

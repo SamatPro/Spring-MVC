@@ -12,47 +12,4 @@
 
     <bean id="appConfig" class="ru.kpfu.itis.configs.AppAnnotationConfig"/>
 
-    <!--<bean id="clientService" class="ru.kpfu.itis.services.client.ClientServiceImpl"/>-->
-
-   <!-- <bean id="authRepository" class="ru.kpfu.itis.repositories.auths.AuthRepositoryJdbcTemplateImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-    <!--<bean id="clientsRepository" class="ru.kpfu.itis.repositories.clients.ClientsRepositoryJdbcTemplateImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="employeesService" class="ru.kpfu.itis.services.employee.EmployeeServiceImpl"/>-->
-
-    <!--<bean id="employeesRepository" class="ru.kpfu.itis.repositories.employees.EmployeesRepositoryImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="ordersRepository" class="ru.kpfu.itis.repositories.orders.OrdersRepositoryImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="citiesRepository" class="ru.kpfu.itis.repositories.cities.CitiesRepositoryJdbcTemplateImplTemplateImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="coopToursRepository" class="ru.kpfu.itis.repositories.cooperativeTours.CooperativeToursRepositoryImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="picturesRepository" class="ru.kpfu.itis.repositories.pictures.PicturesJdbcTemplateRepositoryImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="countriesRepository" class="ru.kpfu.itis.repositories.countries.CountriesRepositoryJdbcTemplateImplTemplateImpl">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>-->
-
-    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="username" value="postgres"/>
-        <property name="password" value="postgres"/>
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/postgres"/>
-    </bean>
--->
-    <!--<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>-->
 </beans>

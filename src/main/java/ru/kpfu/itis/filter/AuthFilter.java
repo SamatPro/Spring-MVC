@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import ru.kpfu.itis.services.client.ClientService;
+import ru.kpfu.itis.services.client.ClientServiceImpl;
 import ru.kpfu.itis.services.employee.EmployeeService;
 
 import javax.servlet.*;
@@ -13,16 +14,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebFilter(urlPatterns = {"/profilePage/*", "/order/delete","/orders", "/americaTours", "/asiaTours", "/australiaTours", "/europeTours", "/hotels", "/tours"})
 public class AuthFilter implements Filter {
 
     @Autowired
     @Qualifier("clientService")
     private ClientService clientService;
 
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-//        clientService = (ClientService) filterConfig.getServletContext().getAttribute("clientService");
+//        clientService = new ClientServiceImpl();
     }
 
     @Override
@@ -35,8 +36,7 @@ public class AuthFilter implements Filter {
         if(cookies != null){
             for (Cookie cookie : cookies){
                 if(cookie.getName().equals("auth")){
-                    System.out.println(cookie.getName());
-                    System.out.println(cookie.getValue());
+                    System.out.println(clientService);
                     if (clientService.isExistByCookie(cookie.getValue())) {
                         System.out.println(clientService.isExistByCookie(cookie.getValue()));
                         filterChain.doFilter(request, response);

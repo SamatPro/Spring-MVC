@@ -22,7 +22,7 @@
             <div class="col-lg-5 ml-auto">
                 <ul class="menu d-flex justify-content-center">
                     <li class="menu__item">
-                        <a href="#">
+                        <a href="reviews">
                             Отзывы
                         </a>
                     </li>

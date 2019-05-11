@@ -8,5 +8,6 @@ import java.util.List;
 public interface PicturesRepository extends CrudRepository<Picture> {
     List<Picture> findAllPicturesByCountryId(Long id);
     List<Picture> findAllPicturesByCountryName(String name);
+    List<Picture> findSomeRandomPictures();
 
 }

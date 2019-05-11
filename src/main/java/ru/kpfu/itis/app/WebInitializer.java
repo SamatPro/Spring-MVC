@@ -21,11 +21,11 @@ public class WebInitializer implements WebApplicationInitializer {
 
     ServletRegistration.Dynamic servlet = container.addServlet("dispatcher", dispatcherServlet);
     servlet.setLoadOnStartup(1);
-    servlet.addMapping("/");
-//    container.addFilter("logFilter", LogFilter.class).addMappingForUrlPatterns(null, false, "/*");
-//    container.addFilter("localizationFilter", LocalizationFilter.class).addMappingForUrlPatterns(null, false, "/*");
+    servlet.addMapping("/*");
     container.addFilter("utfFilter", UtfFilter.class).addMappingForUrlPatterns(null, false, "/*");
     container.addFilter("authFilter", AuthFilter.class).addMappingForUrlPatterns(null, false, "/profilePage");
     container.addFilter("signInFilter", SignInFilter.class).addMappingForUrlPatterns(null, false, "/signIn", "/signUp");
+    container.addFilter("adminFilter", AuthFilter.class).addMappingForUrlPatterns(null, false, "/adminPage");
+
   }
 }

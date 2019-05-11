@@ -12,7 +12,7 @@
 
     <bean id="appConfig" class="ru.kpfu.itis.configs.AppAnnotationConfig"/>
 
-    <!--<bean id="clientService" class="ru.kpfu.itis.services.client.ClientServiceImpl"/>-->
+    <!--<bean id="clientService" class="ru.kpfu.itis.service.client.ClientServiceImpl"/>-->
 
    <!-- <bean id="authRepository" class="ru.kpfu.itis.repositories.auths.AuthRepositoryJdbcTemplateImpl">
         <constructor-arg name="dataSource" ref="dataSource"/>
@@ -21,7 +21,7 @@
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>-->
 
-    <!--<bean id="employeesService" class="ru.kpfu.itis.services.employee.EmployeeServiceImpl"/>-->
+    <!--<bean id="employeesService" class="ru.kpfu.itis.service.employee.EmployeeServiceImpl"/>-->
 
     <!--<bean id="employeesRepository" class="ru.kpfu.itis.repositories.employees.EmployeesRepositoryImpl">
         <constructor-arg name="dataSource" ref="dataSource"/>
@@ -35,7 +35,7 @@
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>-->
 
-    <!--<bean id="coopToursRepository" class="ru.kpfu.itis.repositories.cooperativeTours.CooperativeToursRepositoryImpl">
+    <!--<bean id="coopToursRepository" class="ru.kpfu.itis.repositories.cooperativeTour.CooperativeToursRepositoryImpl">
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>-->
 

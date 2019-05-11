@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-//@WebFilter(urlPatterns = {"/adminPage/*", "/orderProcessing"})
 
 public class AdminFilter  implements Filter {
 

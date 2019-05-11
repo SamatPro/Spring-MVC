@@ -37,10 +37,6 @@ public class LoginValidator implements Validator {
     ValidationUtils.rejectIfEmpty(err, "password", "password", "Не указан пароль");
 
 
-    if (!clientService.signIn(form).isPresent()) {
-      err.reject("email", "Неправильный логин или пароль");
-    }
-
   }
 
 }

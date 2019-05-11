@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class LoginForm {
     private String email;
     private String password;
+    private Boolean remember;
 }

@@ -74,6 +74,7 @@
 </header>
 
 <section class="features">
+
     <div class="container">
         <div class="row">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -82,20 +83,20 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
                 </ol>
                 <div class="carousel-inner">
+
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/palms.jpg?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+                        <img class="d-block w-100" src="img/palms.jpg?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide" width="300" style="overflow: hidden">
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/new-york.jpg?auto=yes&bg=666&fg=444&text=Third slide" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/san-francisco.jpg?auto=yes&bg=555&fg=333&text=Third slide" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/piter.jpg?auto=yes&bg=555&fg=333&text=Third slide" alt="Seventh slide">
-                    </div>
+                    <#list pictures as picture>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="${picture.href}?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide" width="300" style="overflow: hidden">
+                        </div>
+                    </#list>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -110,7 +111,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature__text" align="center">
-                    <p>та же самая херня</p>
+                    <p>Баден-Баден изначально место, куда все едут за лечением, здоровьем и восстановлением. И Brenners Park-Hotel & SPA (от 23 тыс. руб./сутки) как раз специализируется на этом. Точнее, часть отеля, расположенного на вилле. Там всего 16 номеров и отдельная зона со спа: массажи, сауны, хаммам. Еще здесь есть разные детокс-программы. Самая популярная – 10-дневный «Королевский детокс» стоимостью 10 тысяч евро (около 740 тыс. рублей). Но свою цену он оправдывает – здесь включено все, что только можно: чекап (комплексная проверка здоровья), анализы, круглосуточный надзор личного врача, персонализированная диета с учетом предпочтений.
+                        Кроме того, здесь есть и digital detox. В каждой комнате есть специальная кнопка, нажимая которую можно отключить в номере WiFi и все электромагнитные поля. В ванной остается одна розетка, где можно подключить мобильный телефон и закрыть дверь. Телефон будет заряжаться, но электромагнитных полей в комнате не будет.
+                    </p>
                 </div>
             </div>
         </div>
@@ -121,7 +124,6 @@
     <div class="container">
         <div class="col-lg-12">
             <h1 align="center">Оставить отзыв</h1><br>
-            <h3 align="center">авыпыавы</h3>
             <button type="button" class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal">Отправить</button>
         </div>
     </div>
@@ -137,20 +139,17 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <#--<div class="form-group">
-                        <label for="recipient-name" class="col-form-label">${locale["your.number"]}</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                    </div>-->
+                <form method="post" id="review">
                     <div class="form-group">
                         <label for="message-text" class="col-form-label">Сообщение</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <textarea class="form-control" id="message-text" name="reviewText"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary">Отправить</button>
+                <button type="submit" form="review" class="btn btn-primary" formmethod="post">Отправить</button>
+
             </div>
         </div>
     </div>

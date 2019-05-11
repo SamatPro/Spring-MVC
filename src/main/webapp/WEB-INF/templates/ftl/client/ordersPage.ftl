@@ -90,12 +90,12 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Position</th>
-                        <th>Employee Name</th>
-                        <th>Employee Surname</th>
-                        <th>City</th>
-                        <th>Status</th>
-                        <th>Delete</th>
+                        <th>Должность</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Город</th>
+                        <th>Статус</th>
+                        <th>Удалить</th>
                     </tr>
                     </thead>
                     <tbody>

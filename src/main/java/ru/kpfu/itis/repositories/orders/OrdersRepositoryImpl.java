@@ -1,9 +1,6 @@
 package ru.kpfu.itis.repositories.orders;
 
-import lombok.SneakyThrows;
-import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -12,34 +9,28 @@ import org.springframework.stereotype.Component;
 import ru.kpfu.itis.models.*;
 
 import javax.sql.DataSource;
-import java.security.SecureRandom;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 @Component("ordersRepositoryJdbcTemplateImpl")
 public class OrdersRepositoryImpl implements OrdersRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    private static final String DELETE_BY_ID = "DELETE FROM ONLY order_db WHERE id=?;";
-    private static final String ADD_ORDER = "INSERT INTO order_db(client_id, city_id) VALUES (?, ?);";
-    private static final String FIND_RAW_ORDERS_WITH_CLIENT = "SELECT *, order_db.id AS order_id" +
-            " FROM client_db JOIN"+
-            " order_db ON client_db.id = order_db.client_id JOIN city ON order_db.city_id = city.id  WHERE employee_id ISNULL ORDER BY order_id;";
-    private static final String SQL_MAKE_CHANGES = "UPDATE order_db SET employee_id=?, isaccepted=? WHERE id=?";
+    private static final String DELETE_BY_ID = "DELETE FROM ONLY orders WHERE id=?;";
+    private static final String ADD_ORDER = "INSERT INTO orders(client_id, city_id) VALUES (?, ?);";
+    private static final String FIND_RAW_ORDERS_WITH_CLIENT = "SELECT *, orders.id AS order_id" +
+            " FROM client JOIN"+
+            " orders ON client.id = orders.client_id JOIN city ON orders.city_id = city.id  WHERE orders.employee_id ISNULL ORDER BY order_id;";
+    private static final String SQL_MAKE_CHANGES = "UPDATE orders SET employee_id=?, isaccepted=? WHERE id=?";
     private static final String FIND_ORDERS_ONE_CLIENT =
-            "SELECT *, order_db.id AS order_id, " +
-                    "employee_db.first_name AS e_name, " +
-                    "employee_db.last_name AS e_lname " +
-                    " FROM client_db JOIN"+
-                    " order_db ON client_db.id " +
-                    "= order_db.client_id JOIN city ON " +
-                    "order_db.city_id = city.id JOIN " +
-                    "employee_db ON employee_db.id=order_db.employee_id " +
+            "SELECT *, orders.id AS order_id, " +
+                    "employee.first_name AS e_name, " +
+                    "employee.last_name AS e_lname " +
+                    " FROM client JOIN"+
+                    " orders ON client.id " +
+                    "= orders.client_id JOIN city ON " +
+                    "orders.city_id = city.id JOIN " +
+                    "employee ON employee.id=orders.employee_id " +
                     " WHERE client_id=? ORDER BY order_id;";
     @Autowired
     public OrdersRepositoryImpl(DataSource dataSource) {
@@ -47,7 +38,7 @@ public class OrdersRepositoryImpl implements OrdersRepository {
     }
 
     @Override
-    public Optional findOne(Long id) {
+    public Optional<Order> findOne(Long id) {
         return null;
     }
 

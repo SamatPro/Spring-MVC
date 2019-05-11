@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 logo">
-                <a href="home"><img src="img/travel.png" width=350 alt="travel"></a>
+                <a href="/profilePage"><img src="img/travel.png" width=350 alt="travel"></a>
             </div>
             <div class="col-lg-7 ml-auto">
 

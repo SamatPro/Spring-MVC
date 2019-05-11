@@ -1,3 +1,5 @@
+<#ftl encoding="UTF-8">
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -127,6 +129,7 @@
                         <h1 class="card-title pricing-card-title">$400</h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>${city.description}</li>
+
                         </ul>
                         <button class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questCooperative${city.id}" type="button" id="coop${city.id}${city.id}" >Cooperative surve</button>
 
@@ -219,6 +222,7 @@
         </#list>
 
     </div>
+
 </section>
 <footer class="footer">
     <div class="container">

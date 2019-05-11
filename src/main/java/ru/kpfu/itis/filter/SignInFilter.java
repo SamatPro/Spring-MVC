@@ -12,8 +12,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-//@WebFilter(urlPatterns = {"/signIn", "/signUp", "/home"})
-@Component
 public class SignInFilter implements Filter {
 
     @Autowired

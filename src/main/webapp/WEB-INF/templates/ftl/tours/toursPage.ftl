@@ -1,3 +1,5 @@
+<#ftl encoding="UTF-8">
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -26,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 logo">
-                <a href="home"><img src="img/travel.png" width=350 alt="travel"></a>
+                <a href="profilePage"><img src="img/travel.png" width=350 alt="travel"></a>
             </div>
             <div class="col-lg-7 ml-auto">
 
@@ -127,10 +129,11 @@
                         <h1 class="card-title pricing-card-title">$400</h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>${city.description}</li>
-                        </ul>
-                        <button class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questCooperative${city.id}" type="button" id="coop${city.id}${city.id}" >Cooperative surve</button>
 
-                        <button class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal${city.id}" type="button" id="${city.id}${city.id}" >Single surve</button>
+                        </ul>
+                        <button class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questCooperative${city.id}" type="button" id="coop${city.id}${city.id}" >Кооперативный заказ</button>
+
+                        <button class="btn btn-primary btn-lg btn-block quest" data-toggle="modal" data-target="#questModal${city.id}" type="button" id="${city.id}${city.id}" >Одиночный заказ</button>
                     </div>
                 </div>
             </div>
@@ -219,6 +222,7 @@
         </#list>
 
     </div>
+
 </section>
 <footer class="footer">
     <div class="container">

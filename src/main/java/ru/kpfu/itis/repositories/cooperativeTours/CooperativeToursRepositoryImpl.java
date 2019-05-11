@@ -1,31 +1,25 @@
 package ru.kpfu.itis.repositories.cooperativeTours;
 
-import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import ru.kpfu.itis.mapper.RowMapper;
 import ru.kpfu.itis.models.City;
 import ru.kpfu.itis.models.Client;
-import ru.kpfu.itis.models.CooperativeTours;
+import ru.kpfu.itis.models.CooperativeTour;
 import ru.kpfu.itis.models.Order;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 @Component("cooperativeToursRepositoryJdbcTemplateImpl")
 public class CooperativeToursRepositoryImpl implements CooperativeToursRepository{
 
     private JdbcTemplate jdbcTemplate;
-    private static final String SQL_UPDATE_CANDIDATE = "INSERT INTO cooperative_tours(order_id, client_id) VALUES(?, ?);";
-    private static final String SQL_FIND_UNC_TRS = "SELECT description, cooperative_tours.id AS coop_id, last_name, first_name,middle_name, name FROM client_db JOIN order_db ON client_db.id=order_db.client_id JOIN cooperative_tours ON order_db.id=order_id JOIN city ON order_db.city_id = city.id WHERE cooperative_tours.client_id=? AND is_consented ISNULL;";
-    private static final String SQL_CONSENT = "UPDATE cooperative_tours SET is_consented=TRUE WHERE id = ?;";
-    private static final String SQL_DELETE_ORDER = "DELETE FROM ONLY cooperative_tours WHERE id=?;";
-    private static final String SQL_DELETE_ORDERS_BY_ORDER_ID = "DELETE FROM cooperative_tours WHERE order_id=?;";
+    private static final String SQL_UPDATE_CANDIDATE = "INSERT INTO cooperative_tour(order_id, client_id) VALUES(?, ?);";
+    private static final String SQL_FIND_UNC_TRS = "SELECT description, cooperative_tour.id AS coop_id, last_name, first_name,middle_name, city.name FROM client JOIN orders ON client.id=orders.client_id JOIN cooperative_tour ON orders.id=order_id JOIN city ON orders.city_id = city.id WHERE cooperative_tour.client_id=? AND is_consented ISNULL;";
+    private static final String SQL_CONSENT = "UPDATE cooperative_tour SET is_consented=TRUE WHERE id = ?;";
+    private static final String SQL_DELETE_ORDER = "DELETE FROM ONLY cooperative_tour WHERE id=?;";
+    private static final String SQL_DELETE_ORDERS_BY_ORDER_ID = "DELETE FROM cooperative_tour WHERE order_id=?;";
 
     @Autowired
     public CooperativeToursRepositoryImpl(DataSource dataSource) {
@@ -38,12 +32,12 @@ public class CooperativeToursRepositoryImpl implements CooperativeToursRepositor
     }
 
     @Override
-    public List<CooperativeTours> showUnConsentedTours(Long id) {
+    public List<CooperativeTour> showUnConsentedTours(Long id) {
         return jdbcTemplate.query(SQL_FIND_UNC_TRS, cooperativeToursRowMapper, id);
     }
 
 
-    private org.springframework.jdbc.core.RowMapper<CooperativeTours> cooperativeToursRowMapper = (resultSet, i) -> CooperativeTours.builder()
+    private org.springframework.jdbc.core.RowMapper<CooperativeTour> cooperativeToursRowMapper = (resultSet, i) -> CooperativeTour.builder()
             .id(resultSet.getLong("coop_id"))
             .order(
                     Order.builder()
@@ -75,12 +69,12 @@ public class CooperativeToursRepositoryImpl implements CooperativeToursRepositor
     }
 
     @Override
-    public Optional<CooperativeTours> findOne(Long id) {
+    public Optional<CooperativeTour> findOne(Long id) {
         return Optional.empty();
     }
 
     @Override
-    public void save(CooperativeTours model) {
+    public void save(CooperativeTour model) {
 
     }
 
@@ -90,12 +84,12 @@ public class CooperativeToursRepositoryImpl implements CooperativeToursRepositor
     }
 
     @Override
-    public void update(CooperativeTours model) {
+    public void update(CooperativeTour model) {
 
     }
 
     @Override
-    public List<CooperativeTours> findAll() {
+    public List<CooperativeTour> findAll() {
         return null;
     }
 }

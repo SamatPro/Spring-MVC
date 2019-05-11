@@ -9,7 +9,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import ru.kpfu.itis.forms.EmployeeForm;
 import ru.kpfu.itis.forms.LoginForm;
-import ru.kpfu.itis.java.JavaConfig;
 import ru.kpfu.itis.models.Auth;
 import ru.kpfu.itis.models.Employee;
 import ru.kpfu.itis.models.Order;
@@ -25,7 +24,6 @@ import java.util.UUID;
 @Component("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
 
-//    private ApplicationContext context;
     @Autowired
     @Qualifier("employeesRepositoryJdbcTemplateImpl")
     private EmployeesRepository employeesRepository;
@@ -39,11 +37,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
     public EmployeeServiceImpl() {
-        /*context = new
-                AnnotationConfigApplicationContext(JavaConfig.class);
-        this.employeesRepository = context.getBean(EmployeesRepository.class);
-        this.authRepository = context.getBean(AuthRepository.class);
-        this.ordersRepository = context.getBean(OrdersRepository.class);*/
         this.encoder = new BCryptPasswordEncoder();
     }
 
@@ -75,7 +68,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                 authRepository.saveEmployee(auth);
                 return Optional.of(cookieValue);
 
-//                return Optional.of(employee.getId().toString());
             }
 
         }
@@ -158,5 +150,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<Order> findAllOrders() {
         return ordersRepository.findAll();
+    }
+
+    @Override
+    public void deleteCookie(String cookie) {
+        authRepository.deleteCookie(cookie);
     }
 }

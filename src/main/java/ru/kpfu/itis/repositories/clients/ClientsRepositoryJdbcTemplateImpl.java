@@ -23,15 +23,15 @@ public class ClientsRepositoryJdbcTemplateImpl implements ClientsRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    private static final String SQL_FIND_BY_FIRST_NAME = "SELECT id, first_name, last_name, middle_name FROM client_db WHERE first_name ILIKE ? || '%' OR last_name ILIKE ? || '%' OR middle_name ILIKE ? || '%';";
-    private static final String SQL_FIND_ONLY_WITH_NAME = "SELECT id, first_name, last_name FROM client_db;";
-    private static final String SQL_INSERT_QUERY = "INSERT INTO client_db (last_name, first_name, middle_name, address, phone_number, ismale, email, hash_password, news_subscription) "+
+    private static final String SQL_FIND_BY_FIRST_NAME = "SELECT id, first_name, last_name, middle_name FROM client WHERE first_name ILIKE ? || '%' OR last_name ILIKE ? || '%' OR middle_name ILIKE ? || '%';";
+    private static final String SQL_FIND_ONLY_WITH_NAME = "SELECT id, first_name, last_name FROM client;";
+    private static final String SQL_INSERT_QUERY = "INSERT INTO client (last_name, first_name, middle_name, address, phone_number, ismale, email, hash_password, news_subscription) "+
             " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    private static final  String DELETE_BY_ID = "DELETE FROM ONLY client_db WHERE id=?;";
-    private static final String SQL_FIND_ONE_BY_ID_QUERY = "SELECT * FROM client_db WHERE id = ?;";
-    private static final String SELECT_CLIENT_BY_EMAIL_QUERY = "SELECT * FROM client_db WHERE email=?;";
+    private static final  String DELETE_BY_ID = "DELETE FROM ONLY client WHERE id=?;";
+    private static final String SQL_FIND_ONE_BY_ID_QUERY = "SELECT * FROM client WHERE id = ?;";
+    private static final String SELECT_CLIENT_BY_EMAIL_QUERY = "SELECT * FROM client WHERE email=?;";
     private static final String SQL_SELECT_CLIENT_BY_COOKIE =
-            "SELECT * FROM client_db LEFT JOIN auth ON client_db.id=auth.client_id WHERE auth.cookie_value=?;";
+            "SELECT * FROM client LEFT JOIN auth ON client.id=auth.client_id WHERE auth.cookie_value=?;";
 
     @Autowired
     public ClientsRepositoryJdbcTemplateImpl(DataSource dataSource) {
@@ -114,7 +114,6 @@ public class ClientsRepositoryJdbcTemplateImpl implements ClientsRepository {
             .hashPassword(resultSet.getString("hash_password"))
             .isMale(resultSet.getBoolean("ismale"))
             .birthDate(resultSet.getDate("birth_date"))
-            .review(resultSet.getString("review"))
             .address(resultSet.getString("address"))
             .newsSubscription(resultSet.getBoolean("news_subscription"))
             .build();

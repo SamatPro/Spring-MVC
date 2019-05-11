@@ -18,4 +18,5 @@ public interface EmployeeService {
     Employee getEmployee(HttpServletRequest request);
     void makeChanges(Long employeeId, Boolean is_accepted, Long orderId);
     List<Order> findAllOrders();
+    void deleteCookie(String cookie);
 }

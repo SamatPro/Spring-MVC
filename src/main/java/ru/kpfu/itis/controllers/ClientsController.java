@@ -8,25 +8,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.kpfu.itis.forms.ClientForm;
-import ru.kpfu.itis.forms.LoginForm;
 import ru.kpfu.itis.models.*;
+import ru.kpfu.itis.services.Service;
 import ru.kpfu.itis.services.client.ClientService;
 import ru.kpfu.itis.validator.ClientValidator;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class ClientsController{
@@ -34,6 +30,10 @@ public class ClientsController{
   @Autowired
   @Qualifier(value = "clientService")
   private ClientService clientService;
+
+  @Autowired
+  @Qualifier(value = "service")
+  private Service service;
 
   @Autowired
   @Qualifier(value = "clientValidator")
@@ -45,108 +45,11 @@ public class ClientsController{
   }
 
 
-
-//  @RequestMapping(value = "/home", method = RequestMethod.GET)
-  public String mainPage(){
-
-    return "index";
-  }
-
   @RequestMapping(value = "/signUp", method = RequestMethod.GET)
   public String regPage(ModelMap model){
     model.addAttribute("clientForm", new ClientForm());
     return "reg";
   }
-
-//  @RequestMapping(value = "saveClient", method = RequestMethod.POST)
-  public String addUser(
-          @RequestParam(value = "email", defaultValue = "") String email,
-          @RequestParam(value = "password", defaultValue = "") String password,
-          @RequestParam(value = "repassword", defaultValue = "") String repass,
-          @RequestParam(value = "first_name", defaultValue = "") String firstName,
-          @RequestParam(value = "last_name", defaultValue = "") String lastName,
-          @RequestParam(value = "middle_name", defaultValue = "") String middleName,
-          @RequestParam(value = "address", defaultValue = "") String address,
-          @RequestParam(value = "phone_number", defaultValue = "") Long phoneNumber,
-          @RequestParam(value = "gender", defaultValue = "") Boolean isMale,
-          @RequestParam(value = "subscription", defaultValue="false") Boolean newsSubscription,
-          @RequestParam(value = "consent", defaultValue="false") Boolean consent,
-          ModelMap model
-          ){
-
-    if(consent
-            && repass.equals(password)
-            && password.length()>4
-            && email.length()>0
-            && firstName.length()>0
-            && lastName.length()>0
-            && middleName.length()>0
-            && address.length()>0
-            && isMale != null
-            && phoneNumber != null) {
-
-      if (clientService.emailDoesntExist(email)) {
-        ClientForm clientForm = ClientForm.builder()
-                .email(email)
-                .password(password)
-                .firstName(firstName)
-                .lastName(lastName)
-                .middleName(middleName)
-                .address(address)
-                .phoneNumber(phoneNumber)
-                .isMale(isMale)
-                .newsSubscription(newsSubscription)
-                .build();
-        clientService.signUp(clientForm);
-        return "redirect:signIn";
-      }else{
-        model.addAttribute("signUpError", "Пользователь с таким логином уже существует.");
-        return "signUp";
-
-      }
-    } else {
-      if (!consent)
-        model.addAttribute("signUpError", "Согласие на обработку данных!");
-      if (!(firstName.length() > 0 && lastName.length() > 0 && middleName.length() > 0 && isMale != null && address.length() > 0)) {
-        model.addAttribute("signUpError", "Name, gender or address fields are empty");
-      }
-      if (email!=null) {
-        model.addAttribute("signUpError", "Email");
-      }
-      if (password!=null){
-        model.addAttribute("signUpError", "Password");
-      }
-      /*if (repass && password.length()>4){
-        request.setAttribute("repass", password);
-      }
-      if (phoneNumber!=null){
-        request.setAttribute("phoneNum", phoneNumber);
-      }
-      if (address!=null){
-        request.setAttribute("address", address);
-      }
-      if (lastName!=null){
-        request.setAttribute("lastName", lastName);
-      }
-      if (firstName!=null){
-        request.setAttribute("firstName", firstName);
-      }
-      if (middleName!=null){
-        request.setAttribute("middleName", middleName);
-      }
-      if (!repass) {
-        request.setAttribute("passwordError", "Passwords do not match");
-      }*/
-
-      return "reg";
-
-    }
-  }
-
-  /*@RequestMapping(value = "/signIn", method = RequestMethod.GET)
-  public String signIn(){
-    return "login";
-  }*/
 
   @RequestMapping(value = "/users", method = RequestMethod.GET)
   public String getUsersPage(ModelMap modelMap) {
@@ -155,50 +58,19 @@ public class ClientsController{
     return "user_page";
   }
 
-  /*@RequestMapping(value = "/signIn", method = RequestMethod.POST)
-  public String signIn(
-//          @CookieValue(value = "auth") String cookie,
-          @RequestParam(value = "email") String email,
-          @RequestParam(value = "password") String password,
-          @RequestParam(value = "remember", required = false) Boolean remember,
-          ModelMap model,
-          HttpServletResponse response
-  ) throws IOException {
-    LoginForm loginForm = LoginForm.builder()
-            .email(email)
-            .password(password)
-            .build();
-      Optional<String> cookieValueCandidate = clientService.signIn(loginForm);
-        Client client = clientService.getClientByCookie(cookieValueCandidate.get());
-        Cookie authCookie = new Cookie("auth", cookieValueCandidate.get());
-        authCookie.setMaxAge(60*60*24*30);
-        response.addCookie(authCookie);
-        System.out.println(client.getFirstName());
-        return "redirect:profilePage";
-  }*/
-
   @RequestMapping(value = "/profilePage", method = RequestMethod.GET)
   public ModelAndView profilePage(HttpServletRequest request){
     ModelAndView modelAndView = new ModelAndView();
     modelAndView.setViewName("profilePage");
 
     Client client = clientService.getClient(request);
-    System.out.println(client.getFirstName());
+    modelAndView.addObject("pictures", service.getRandomPictures());
 
     modelAndView.addObject("clientFirstName", client.getFirstName());
     modelAndView.addObject("clientLastName", client.getLastName());
     modelAndView.addObject("countries", clientService.getCountries());
     return modelAndView;
   }
-
-  /*@RequestMapping(value = "saveClient", method = RequestMethod.POST)
-  public String addUser(@ModelAttribute("clientForm") @Validated ClientForm clientForm,
-          BindingResult result, Model model){
-
-    clientService.signUp(clientForm);
-    return "redirect:signIn";
-  }*/
- // проверить название
 
   @RequestMapping(value = "saveClient", method = RequestMethod.POST)
   public String addUser(@Valid @ModelAttribute("clientForm")
@@ -224,11 +96,12 @@ public class ClientsController{
     return clientService.findAllByFirstName("%");
   }
 
+
   @RequestMapping(value = "/myInvitations", method = RequestMethod.GET)
   public String invitationsPage(HttpServletRequest request, ModelMap modelMap){
     Client client = clientService.getClient(request);
 
-    List<CooperativeTours> list = clientService.showUnConsentedTours(client.getId());
+    List<CooperativeTour> list = clientService.showUnConsentedTours(client.getId());
     modelMap.addAttribute("coop", list);
     modelMap.addAttribute("clientFirstName", client.getFirstName());
     modelMap.addAttribute("clientLastName", client.getLastName());
@@ -268,10 +141,13 @@ public class ClientsController{
     modelMap.addAttribute("countries", countries);
 
     List<City> cities;
+
     List<Picture> pictures;
 
     cities = clientService.getCities(country);
+
     pictures = clientService.getPictures(country);
+
     modelMap.addAttribute("cityList", cities);
     modelMap.addAttribute("picture", pictures);
     modelMap.addAttribute("country", country);
@@ -345,11 +221,20 @@ public class ClientsController{
 
   }
 
+  @RequestMapping(value = "/profilePage", method = RequestMethod.POST)
+  public String addReview(HttpServletRequest request,
+                           @RequestParam(value = "reviewText") String reviewText
+  ) {
 
-
-
-
-
+    Client client = clientService.getClient(request);
+    clientService.addReview(client.getId(), reviewText);
+    return "redirect:/profilePage";
+  }
+  @RequestMapping(value = "/reviews", method = RequestMethod.GET)
+  public String reviews(ModelMap modelMap) {
+    modelMap.addAttribute("reviews", service.getAllReviews());
+    return "reviews";
+  }
 
 
 

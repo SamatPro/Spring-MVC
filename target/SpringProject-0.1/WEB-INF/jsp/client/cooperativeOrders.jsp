@@ -70,7 +70,7 @@
                     </li>
                     <li class="menu__item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ${locale.get("tour.services")}
+                            ${locale.get("tour.service")}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <a class="dropdown-item" href="<c:url value="hotels"/>">${locale.get("signup.hotels")}</a>

@@ -8,13 +8,16 @@ import org.springframework.stereotype.Component;
 import ru.kpfu.itis.forms.ClientForm;
 import ru.kpfu.itis.forms.LoginForm;
 import ru.kpfu.itis.models.*;
+import ru.kpfu.itis.repositories.auths.AuthJpaRepository;
 import ru.kpfu.itis.repositories.auths.AuthRepository;
 import ru.kpfu.itis.repositories.cities.CitiesRepository;
+import ru.kpfu.itis.repositories.clients.ClientsJpaRepositoryCustom;
 import ru.kpfu.itis.repositories.clients.ClientsRepository;
 import ru.kpfu.itis.repositories.cooperativeTours.CooperativeToursRepository;
 import ru.kpfu.itis.repositories.countries.CountriesRepository;
 import ru.kpfu.itis.repositories.orders.OrdersRepository;
 import ru.kpfu.itis.repositories.pictures.PicturesRepository;
+import ru.kpfu.itis.repositories.reviews.ReviewsRepository;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -46,21 +49,20 @@ public class ClientServiceImpl implements ClientService {
     @Autowired
     @Qualifier("picturesRepositoryJdbcTemplateImpl")
     private PicturesRepository picturesRepository;
+    @Autowired
+    @Qualifier("ClientsJpaRepository")
+    private ClientsJpaRepositoryCustom clientsJpaRepositoryCustom;
+    @Autowired
+    @Qualifier("authJpaRepository")
+    private AuthJpaRepository authJpaRepository;
+    @Autowired
+    @Qualifier("reviewsRepositoryJdbcTemplateImpl")
+    private ReviewsRepository reviewsRepository;
+
 //    @Autowired
     private PasswordEncoder encoder;
 
     public ClientServiceImpl() {
-//        context = new
-//                AnnotationConfigApplicationContext(JavaConfig.class);
-
-//        this.clientsRepository = context.getBean(ClientsRepository.class);
-//        this.authRepository = context.getBean(AuthRepository.class);
-//        this.countriesRepository = context.getBean(CountriesRepository.class);
-//        this.ordersRepository = context.getBean(OrdersRepository.class);
-//        this.citiesRepository = context.getBean(CitiesRepository.class);
-//        this.cooperativeToursRepository = context.getBean(CooperativeToursRepository.class);
-//        this.picturesRepository = context.getBean(PicturesRepository.class);
-
         this.encoder = new BCryptPasswordEncoder();
     }
 
@@ -93,10 +95,8 @@ public class ClientServiceImpl implements ClientService {
                         .client(client)
                         .cookieValue(cookieValue)
                         .build();
-                authRepository.save(auth);
+                authJpaRepository.save(auth);
                 return Optional.of(cookieValue);
-
-//                return Optional.of(client.getId().toString());
 
             }
 
@@ -119,12 +119,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public boolean isExistByCookie(String cookieValue) {
-        /*if(!authRepository.findByCookieValue(cookieValue).equals(Optional.empty())){
-            return true;
-        }
-        return false;*/
-        System.out.println(authRepository.findByCookieValue(cookieValue).isPresent());
-        return !authRepository.findByCookieValue(cookieValue).equals(Optional.empty());
+        return authRepository.findByCookieValue(cookieValue).isPresent();
     }
 
     @Override
@@ -139,7 +134,7 @@ public class ClientServiceImpl implements ClientService {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("auth")) {
                     if (isExistByCookie(cookie.getValue())) {
-                        clientOptional = clientsRepository.findClientByCookie(cookie.getValue());
+                        clientOptional = clientsJpaRepositoryCustom.findClientByCookie(cookie.getValue());
                         client = clientOptional.get();
                     }
                     else {
@@ -190,7 +185,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public List<CooperativeTours> showUnConsentedTours(Long id) {
+    public List<CooperativeTour> showUnConsentedTours(Long id) {
         return cooperativeToursRepository.showUnConsentedTours(id);
     }
 
@@ -238,5 +233,10 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public List<Picture> getPictures(String countryName) {
         return picturesRepository.findAllPicturesByCountryName(countryName);
+    }
+
+    @Override
+    public void addReview(Long clientId, String text) {
+        reviewsRepository.addReview(clientId, text);
     }
 }

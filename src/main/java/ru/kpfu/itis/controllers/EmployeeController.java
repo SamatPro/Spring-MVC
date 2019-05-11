@@ -10,15 +10,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ru.kpfu.itis.forms.LoginForm;
 import ru.kpfu.itis.models.Employee;
+import ru.kpfu.itis.models.Order;
 import ru.kpfu.itis.services.employee.EmployeeService;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
-//@Controller
+@Controller
 public class EmployeeController {
 
   @Autowired
@@ -26,9 +28,9 @@ public class EmployeeController {
   private EmployeeService employeeService;
 
   @RequestMapping(value = "/adminPage", method = RequestMethod.GET)
-  public ModelAndView profilePage(HttpServletRequest request){
+  public ModelAndView adminPage(HttpServletRequest request){
     ModelAndView modelAndView = new ModelAndView();
-    modelAndView.setViewName("profilePage");
+    modelAndView.setViewName("employeePage");
 
     Employee employee = employeeService.getEmployee(request);
 
@@ -37,30 +39,28 @@ public class EmployeeController {
     return modelAndView;
   }
 
-//  @RequestMapping(value = "/signIn", method = RequestMethod.GET)
-  public String signIn(){
-    return "login";
+  @RequestMapping(value = "/orderProcessing", method = RequestMethod.GET)
+  public ModelAndView orderProcesssing(HttpServletRequest request){
+    ModelAndView modelAndView = new ModelAndView();
+    modelAndView.setViewName("orderProcessing");
+    List<Order> orders = employeeService.findAllOrders();
+    modelAndView.addObject("orders", orders);
+    Employee employee = employeeService.getEmployee(request);
+
+    modelAndView.addObject("employeeFirstName", employee.getFirstName());
+    modelAndView.addObject("employeeLastName", employee.getLastName());
+    return modelAndView;
+  }
+  @RequestMapping(value = "/order/check", method = RequestMethod.POST)
+  public void checkOrder(HttpServletRequest request,
+                                 ModelMap modelMap,
+                                 @RequestParam(value = "order_id") Long order_id,
+                                 @RequestParam(value = "bool") Boolean isAccepted){
+    Employee employee = employeeService.getEmployee(request);
+
+    modelMap.addAttribute("employeeFirstName", employee.getFirstName());
+    modelMap.addAttribute("employeeLastName", employee.getLastName());
+    employeeService.makeChanges(employee.getId(), isAccepted, order_id);
   }
 
-//  @RequestMapping(value = "/signIn", method = RequestMethod.POST)
-  public String signIn(
-//          @CookieValue(value = "auth") String cookie,
-          @RequestParam(value = "email") String email,
-          @RequestParam(value = "password") String password,
-          @RequestParam(value = "remember", required = false) Boolean remember,
-          ModelMap model,
-          HttpServletResponse response
-  ) throws IOException {
-    LoginForm loginForm = LoginForm.builder()
-            .email(email)
-            .password(password)
-            .build();
-    Optional<String> cookieValueCandidate = employeeService.signIn(loginForm);
-    Employee employee = employeeService.getEmployeeByCookie(cookieValueCandidate.get());
-    Cookie authCookie = new Cookie("auth", cookieValueCandidate.get());
-    authCookie.setMaxAge(60*60*24*30);
-    response.addCookie(authCookie);
-    System.out.println(employee.getFirstName());
-    return "redirect:adminPage";
-  }
 }

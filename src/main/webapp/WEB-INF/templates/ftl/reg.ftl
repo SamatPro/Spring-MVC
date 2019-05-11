@@ -1,5 +1,4 @@
 <#ftl encoding="UTF-8">
-<#assign form=JspTaglibs["http://www.springframework.org/tags/form"] />
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +26,7 @@
 
                 <ul class="menu d-flex justify-content-center">
                     <li class="menu__item">
-                        <a href="#">
+                        <a href="reviews">
                             Отзывы
                         </a>
                     </li>

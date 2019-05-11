@@ -15,9 +15,9 @@ public class ToursRepositoryImpl implements ToursRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    private static final String DELETE_BY_ID = "DELETE FROM ONLY tour_db WHERE id=?;";
-    private static final String SQL_INSERT_QUERY = "INSERT INTO tour_db(departure_date, arrival_date) VALUES (?, ?, ?);";
-    private static final String SQL_FIND_ONE_BY_ID_QUERY = "SELECT * FROM tour_db WHERE id = ?";
+    private static final String DELETE_BY_ID = "DELETE FROM ONLY tour WHERE id=?;";
+    private static final String SQL_INSERT_QUERY = "INSERT INTO tour(departure_date, arrival_date) VALUES (?, ?, ?);";
+    private static final String SQL_FIND_ONE_BY_ID_QUERY = "SELECT * FROM tour WHERE id = ?";
 
     @Autowired
     public ToursRepositoryImpl(DataSource dataSource) {
